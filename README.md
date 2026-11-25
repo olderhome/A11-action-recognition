@@ -7,8 +7,8 @@
 - `results/`：训练日志、checkpoint、特征和预测结果。
 - `figures/`：论文候选图、架构图和路线图。
 - `reports/`：分析、结果、图示和验收报告。
-- `paper/`：最终技术报告源码和 PDF。
-- `deliverables/`：可直接查看的论文 PDF 和可编辑答辩 PPTX。
+- `paper/`：技术报告源文件与内部预览。
+- `deliverables/`：可编辑 Word 论文和答辩 PPTX。
 
 ## 正式结果
 
@@ -27,8 +27,8 @@
 
 - `reports/RESULTS_REPORT.md`
 - `reports/VERIFY_REPORT.md`
-- `paper/A11_论文.pdf`
-- `deliverables/A11_答辩汇报_答辩版.pptx`
+- `deliverables/A11_技术论文.docx`
+- `deliverables/A11_答辩汇报_终版.pptx`
 
 ## 环境
 

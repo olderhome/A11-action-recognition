@@ -1,17 +1,26 @@
+runtime/
 __pycache__/
 *.pyc
-*.pth
-*.onnx
-*.npy
-*.npz
-*.pkl
-*.log
+.codex-finalizer
+.codex-finalizer/
+.chart-data-*/
+mmaction2-main.zip
 
+mmaction2-main/
 mmaction2-main/data/
 mmaction2-main/checkpoints/
 mmaction2-main/outputs/
 
-runtime/
-outputs/
-work/
+results/features/
+results/feature_pipeline/*/features/
+results/runs/*/best.pth
+results/**/*.pth
+results/**/*.npy
+results/data/*.pkl
+outputs/comparison_results/
+outputs/camera_probe/
+outputs/camera_tests/
+outputs/**/*.mp4
 
+*.log
+*.tmp

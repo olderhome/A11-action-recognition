@@ -9,7 +9,7 @@ const PREVIEW_DIR = path.join(PROJECT_ROOT, "presentation", "previews");
 const OUTPUT_DIR = path.join(PROJECT_ROOT, "deliverables");
 const SKILL_DIR =
   "C:/Users/Administrator/.codex/plugins/cache/openai-primary-runtime/presentations/26.1007.11041/skills/presentations";
-const FINAL_PPTX = path.join(OUTPUT_DIR, "A11_答辩汇报_答辩版.pptx");
+const FINAL_PPTX = path.join(OUTPUT_DIR, "A11_答辩汇报_终版.pptx");
 const STAGING_DIR = path.join(PROJECT_ROOT, ".codex-finalizer");
 const RUNTIME_PYTHON =
   "C:/Users/Administrator/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe";
@@ -493,7 +493,7 @@ async function main() {
 
   // 7. Delta target
   {
-    const slide = addBaseSlide(presentation, "两条候选路线均超过 4 个百分点目标", 7);
+    const slide = addBaseSlide(presentation, "三条候选配置均超过 4 个百分点目标", 7);
     const deltas = [
       ["TSN 线性", comps.get("tsn2d_uniform:linear").delta_mean * 100],
       ["TSN 时序注意力", comps.get("tsn2d_uniform:temporal").delta_mean * 100],
@@ -555,7 +555,7 @@ async function main() {
       valign: "middle",
     });
     slide.speakerNotes.text =
-      "这一段回答题目最硬的指标。TSN 两种头和 R2+1D 都超过 4 个百分点。配对检验只作为辅助证据，三个种子仍是小样本，因此不把它解释成普遍显著性保证。";
+      "这一段回答题目最硬的指标。TSN 的两种头部和 R2+1D 共三条候选配置都超过 4 个百分点。配对检验只作为辅助证据，三个种子仍是小样本，因此不把它解释成普遍显著性保证。";
   }
 
   // 8. Sampling
@@ -884,7 +884,7 @@ async function main() {
     verifyArtifactToolImport: true,
     receiptPath: path.join(
       STAGING_DIR,
-      "A11_答辩汇报_答辩版.validation.json",
+      "A11_答辩汇报_终版.validation.json",
     ),
   });
   console.log(JSON.stringify(result, null, 2));

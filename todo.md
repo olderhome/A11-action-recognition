@@ -26,11 +26,11 @@
 - [x] 4. 技术报告撰写 - `5writing`
   - [x] 5000–8000 字中文报告
   - [x] 图表、结果和参考文献
-  - [x] 编译为 PDF
+  - [x] 生成 Word 论文
 - [x] 5. 演示与答辩材料
   - [x] 现场演示入口
   - [x] 10 分钟答辩 PPT
-  - [ ] 5 分钟演示视频或脚本（可选，现场演示已可用）
+  - [x] 5 分钟演示脚本（已写入答辩 PPT 演讲者备注）
 - [x] 6. 验证和验收 - `6verity`
   - [x] 数值一致性、图表引用、可复现性检查
   - [x] 提交清单和 `reports/VERIFY_REPORT.md`
@@ -43,13 +43,14 @@
 - [x] 将时间/空间预算改成相同帧像素成本
 - [x] 增加特征提取阶段 2 GiB 显存硬性检查
 - [x] 完成全量正式实验并核对 2 GiB 约束
-- [x] 完成技术论文 PDF
+- [x] 完成技术论文 Word
 - [x] 完成可编辑答辩 PPTX
 
 ## 最终交付文件
 
-- `deliverables/A11_技术论文.pdf`
-- `deliverables/A11_答辩汇报_答辩版.pptx`
+- `deliverables/A11_技术论文.docx`
+- `deliverables/A11_答辩汇报_终版.pptx`
+- `paper/word-build/build_docx.py`
 - `paper/main.typ`
 - `reports/RESULTS_REPORT.md`
 - `reports/VERIFY_REPORT.md`
