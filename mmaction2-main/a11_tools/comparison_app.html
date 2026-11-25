@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A11 时空路线对照测试台</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111417;
+      --surface: #1a1f23;
+      --surface-2: #22282d;
+      --line: #323a40;
+      --text: #f2f4f5;
+      --muted: #aab2b8;
+      --teal: #37b7a5;
+      --orange: #df8e3b;
+      --danger: #e46c6c;
+      --ok: #7ccf9a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(55,183,165,.11), transparent 28rem),
+        radial-gradient(circle at 95% 10%, rgba(223,142,59,.10), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font: 15px/1.55 "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+    .shell { max-width: 1220px; margin: 0 auto; padding: 30px 22px 48px; }
+    header { display: flex; gap: 20px; justify-content: space-between; align-items: flex-start; }
+    h1 { margin: 0; font-size: clamp(26px, 4vw, 42px); letter-spacing: -.035em; }
+    .subtitle { color: var(--muted); margin-top: 8px; max-width: 780px; }
+    .status-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+    .pill { border: 1px solid var(--line); background: var(--surface); padding: 7px 11px; border-radius: 999px; color: var(--muted); white-space: nowrap; }
+    .pill strong { color: var(--text); font-weight: 500; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: 18px; margin-top: 24px; }
+    .panel { border: 1px solid var(--line); background: rgba(26,31,35,.88); border-radius: 16px; }
+    .panel-inner { padding: 18px; }
+    .panel-title { margin: 0 0 12px; font-size: 17px; font-weight: 500; }
+    .case-list { display: grid; gap: 10px; }
+    .case {
+      text-align: left; color: var(--text); background: var(--surface-2);
+      border: 1px solid var(--line); border-radius: 12px; padding: 14px;
+      cursor: pointer; width: 100%;
+    }
+    .case:hover { border-color: #59656d; }
+    .case.selected { border-color: var(--teal); background: rgba(55,183,165,.10); }
+    .case-title { font-weight: 500; }
+    .case-desc { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .case-ref { color: #d8c9b8; font-size: 12px; margin-top: 7px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    button {
+      min-height: 42px; border: 1px solid var(--line); border-radius: 10px;
+      padding: 10px 16px; font: inherit; color: var(--text);
+      background: var(--surface-2); cursor: pointer;
+    }
+    button:hover:not(:disabled) { border-color: #65727b; }
+    button.primary { background: var(--teal); color: #08201c; border-color: var(--teal); font-weight: 600; }
+    button.camera { background: var(--orange); color: #231407; border-color: var(--orange); font-weight: 600; }
+    button:disabled { opacity: .48; cursor: wait; }
+    .progress { display: none; margin-top: 16px; }
+    .progress.visible { display: block; }
+    .progress-track { height: 5px; overflow: hidden; border-radius: 999px; background: #30373c; }
+    .progress-fill { height: 100%; width: 0; background: var(--teal); transition: width .45s ease; }
+    .progress-text { color: var(--muted); font-size: 13px; margin-top: 7px; }
+    .summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+    .metric { border-radius: 12px; background: var(--surface-2); padding: 13px; }
+    .metric-label { color: var(--muted); font-size: 12px; }
+    .metric-value { margin-top: 4px; font-size: 18px; font-variant-numeric: tabular-nums; }
+    .results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+    .route-card { overflow: hidden; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); }
+    .route-head { padding: 15px 16px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .route-title { margin: 0; font-size: 16px; font-weight: 500; }
+    .route-sample { color: var(--muted); font-size: 12px; margin-top: 4px; }
+    .route-tag { border: 1px solid var(--route); color: var(--route); border-radius: 999px; padding: 3px 8px; font-size: 12px; white-space: nowrap; }
+    .route-image { width: 100%; display: block; background: #080a0b; aspect-ratio: 4 / 3; object-fit: cover; }
+    .route-body { padding: 15px 16px 17px; }
+    .top1 { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+    .top1-label { font-size: 22px; font-weight: 600; text-transform: capitalize; }
+    .top1-score { color: var(--route); font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .route-meta { color: var(--muted); font-size: 12px; display: flex; gap: 14px; flex-wrap: wrap; margin-top: 7px; }
+    .bars { display: grid; gap: 8px; margin-top: 14px; }
+    .bar-row { display: grid; grid-template-columns: minmax(110px, 1fr) 2fr 58px; align-items: center; gap: 9px; }
+    .bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #d9dddf; font-size: 13px; }
+    .bar-track { height: 7px; border-radius: 999px; background: #30373c; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--route); border-radius: inherit; }
+    .bar-score { text-align: right; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+    .history { margin-top: 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; font-size: 13px; }
+    th { color: var(--muted); font-weight: 500; }
+    .empty { color: var(--muted); padding: 32px 18px; text-align: center; }
+    .error { color: var(--danger); margin-top: 14px; white-space: pre-wrap; }
+    .note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+    @media (max-width: 900px) {
+      header, .layout { display: block; }
+      .status-row { justify-content: flex-start; margin-top: 16px; }
+      .panel + .panel { margin-top: 16px; }
+      .results { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .shell { padding: 20px 14px 36px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: minmax(90px, 1fr) 1.4fr 50px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <h1>时空路线对照测试台</h1>
+        <div class="subtitle">同一段视频分别送入 TSN 分段聚合与 R(2+1)D 轻量 3D 网络，结果直接叠加在画面上。</div>
+      </div>
+      <div class="status-row">
+        <div class="pill" id="gpu-status">GPU 检测中</div>
+        <div class="pill">模型 <strong>Kinetics-400</strong></div>
+        <div class="pill">用途 <strong>运行验证</strong></div>
+      </div>
+    </header>
+
+    <section class="layout">
+      <div class="panel">
+        <div class="panel-inner">
+          <h2 class="panel-title">选择测试用例</h2>
+          <div class="case-list" id="case-list"></div>
+          <div class="actions">
+            <button class="primary" id="run-button" disabled>运行两条路线</button>
+            <button class="camera" id="camera-button">采集摄像头并测试</button>
+          </div>
+          <div class="progress" id="progress">
+            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+            <div class="progress-text" id="progress-text">准备中</div>
+          </div>
+          <div class="error" id="error" role="alert"></div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="panel-inner">
+          <h2 class="panel-title">本次对照摘要</h2>
+          <div id="summary" class="empty">运行一个测试用例后显示摘要。</div>
+          <div class="note">这里的准确性和耗时只验证演示模型链路，不等同于 UCF101 训练评估，也不代表 2 GB 训练预算已通过。</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="results" class="results"></section>
+
+    <section class="panel history">
+      <div class="panel-inner">
+        <h2 class="panel-title">最近运行记录</h2>
+        <div id="history" class="empty">暂无记录。</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const state = { cases: [], selected: null, busy: false };
+    const caseList = document.getElementById('case-list');
+    const runButton = document.getElementById('run-button');
+    const cameraButton = document.getElementById('camera-button');
+    const progress = document.getElementById('progress');
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+    const errorBox = document.getElementById('error');
+    const results = document.getElementById('results');
+    const summary = document.getElementById('summary');
+    const history = document.getElementById('history');
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[char]);
+    }
+
+    function setBusy(value, message = '') {
+      state.busy = value;
+      runButton.disabled = value || !state.selected;
+      cameraButton.disabled = value;
+      progress.classList.toggle('visible', value);
+      if (message) progressText.textContent = message;
+      if (!value) progressFill.style.width = '0%';
+    }
+
+    function setProgress(percent, message) {
+      progressFill.style.width = `${percent}%`;
+      progressText.textContent = message;
+    }
+
+    function showError(message) {
+      errorBox.textContent = message || '';
+    }
+
+    function renderCases() {
+      caseList.innerHTML = state.cases.map(item => `
+        <button class="case ${item.id === state.selected ? 'selected' : ''}" data-case="${escapeHtml(item.id)}">
+          <div class="case-title">${escapeHtml(item.title)}</div>
+          <div class="case-desc">${escapeHtml(item.description)}</div>
+          <div class="case-ref">参考：${escapeHtml(item.reference)}</div>
+        </button>
+      `).join('');
+      document.querySelectorAll('.case').forEach(button => {
+        button.addEventListener('click', () => {
+          if (state.busy) return;
+          state.selected = button.dataset.case;
+          renderCases();
+        });
+      });
+    }
+
+    function barRows(items, accent) {
+      return items.map(item => `
+        <div class="bar-row">
+          <div class="bar-label" title="${escapeHtml(item.label)}">${escapeHtml(item.label)}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.max(0.8, item.score * 100)}%"></div></div>
+          <div class="bar-score">${(item.score * 100).toFixed(2)}%</div>
+        </div>
+      `).join('');
+    }
+
+    function renderResults(data) {
+      const tsn = data.routes.tsn_2d;
+      const r3d = data.routes.r2plus1d_3d;
+      const routeCard = (key, route, image) => `
+        <article class="route-card" style="--route:${route.accent}">
+          <div class="route-head">
+            <div>
+              <h3 class="route-title">${escapeHtml(route.name)}</h3>
+              <div class="route-sample">${escapeHtml(route.sample)}</div>
+            </div>
+            <div class="route-tag">${key === 'tsn_2d' ? '2D' : '3D'}</div>
+          </div>
+          <img class="route-image" src="data:image/jpeg;base64,${image}" alt="${escapeHtml(route.name)} 的视频预测画面">
+          <div class="route-body">
+            <div class="top1">
+              <div class="top1-label">${escapeHtml(route.top5[0].label)}</div>
+              <div class="top1-score">${(route.top5[0].score * 100).toFixed(1)}%</div>
+            </div>
+            <div class="route-meta">
+              <span>耗时 ${route.elapsed_seconds.toFixed(2)} s</span>
+              <span>参数 ${(route.parameters / 1e6).toFixed(1)} M</span>
+              <span>参数显存 ${route.parameter_mb.toFixed(0)} MiB</span>
+            </div>
+            <div class="bars">${barRows(route.top5, route.accent)}</div>
+          </div>
+        </article>
+      `;
+      results.innerHTML = routeCard('tsn_2d', tsn, data.images.tsn_2d) +
+        routeCard('r2plus1d_3d', r3d, data.images.r2plus1d_3d);
+
+      const fasterText = data.summary.faster_route === 'tsn_2d' ? 'TSN 2D' : 'R(2+1)D 3D';
+      const agreementText = data.summary.agreement ? '一致' : '不同';
+      summary.innerHTML = `
+        <div class="summary-grid">
+          <div class="metric"><div class="metric-label">Top-1 一致性</div><div class="metric-value">${agreementText}</div></div>
+          <div class="metric"><div class="metric-label">本次更快</div><div class="metric-value">${fasterText}</div></div>
+          <div class="metric"><div class="metric-label">模型驻留</div><div class="metric-value">${data.summary.gpu_resident_mb.toFixed(0)} MiB</div></div>
+          <div class="metric"><div class="metric-label">两模型进程峰值</div><div class="metric-value">${data.summary.gpu_peak_mb.toFixed(0)} MiB</div></div>
+        </div>
+        <div class="note">2D：${escapeHtml(data.summary.tsn_top1)} · 3D：${escapeHtml(data.summary.r3d_top1)}</div>
+      `;
+    }
+
+    async function loadHistory() {
+      try {
+        const response = await fetch('/api/history');
+        const data = await response.json();
+        if (!data.history.length) return;
+        history.classList.remove('empty');
+        history.innerHTML = `<div style="overflow-x:auto"><table>
+          <thead><tr><th>时间</th><th>用例</th><th>TSN</th><th>R(2+1)D</th><th>Top-1</th></tr></thead>
+          <tbody>${data.history.map(row => `<tr>
+            <td>${escapeHtml(row.created_at.replace('T', ' '))}</td>
+            <td>${escapeHtml(row.case)}</td>
+            <td>${escapeHtml(row.tsn_top1)}</td>
+            <td>${escapeHtml(row.r3d_top1)}</td>
+            <td>${row.agreement ? '一致' : '不同'}</td>
+          </tr>`).join('')}</tbody>
+        </table></div>`;
+      } catch (_) {}
+    }
+
+    async function runSelected() {
+      if (state.busy || !state.selected) return;
+      showError('');
+      setBusy(true);
+      setProgress(8, '读取视频并初始化模型…');
+      try {
+        const timer = setTimeout(() => setProgress(38, '2D 路线推理中…'), 500);
+        const response = await fetch('/api/run', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({case_id: state.selected})
+        });
+        clearTimeout(timer);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || '运行失败');
+        setProgress(100, '两条路线结果已生成');
+        renderResults(data);
+        await loadHistory();
+      } catch (error) {
+        showError(error.message);
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    async function captureAndRun() {
+      if (state.busy) return;
+      showError('');
+      setBusy(true);
+      setProgress(10, '正在采集 4 秒摄像头视频…');
+      try {
+        const response = await fetch('/api/capture', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({camera_id: 0, duration: 4})
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || '摄像头测试失败');
+        setProgress(100, '摄像头与两条路线均已运行');
+        renderResults(data);
+        await Promise.all([loadCases(), loadHistory()]);
+      } catch (error) {
+        showError(error.message);
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    async function loadCases() {
+      const response = await fetch('/api/testcases');
+      const data = await response.json();
+      state.cases = data.cases;
+      if (!state.selected || !state.cases.some(item => item.id === state.selected)) {
+        state.selected = state.cases[0]?.id || null;
+      }
+      renderCases();
+      runButton.disabled = !state.selected || state.busy;
+    }
+
+    async function initialize() {
+      try {
+        const health = await fetch('/api/health').then(response => response.json());
+        document.getElementById('gpu-status').innerHTML = health.cuda
+          ? `GPU <strong>${escapeHtml(health.gpu)}</strong>`
+          : 'GPU <strong>不可用</strong>';
+        await Promise.all([loadCases(), loadHistory()]);
+      } catch (error) {
+        showError(`无法连接测试台服务：${error.message}`);
+      }
+      runButton.addEventListener('click', runSelected);
+      cameraButton.addEventListener('click', captureAndRun);
+    }
+
+    initialize();
+  </script>
+</body>
+</html>

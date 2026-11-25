@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pth
+*.onnx
+*.npy
+*.npz
+*.pkl
+*.log
+
+mmaction2-main/data/
+mmaction2-main/checkpoints/
+mmaction2-main/outputs/
+
+runtime/
+outputs/
+work/
+

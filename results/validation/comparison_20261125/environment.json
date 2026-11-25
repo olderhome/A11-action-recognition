@@ -1,0 +1,41 @@
+{
+  "health": {
+    "ok": true,
+    "cuda": true,
+    "gpu": "NVIDIA GeForce GTX 1050 Ti"
+  },
+  "repeats": 3,
+  "testcases": [
+    {
+      "id": "demo_arm_wrestling",
+      "title": "掰手腕示例",
+      "description": "项目自带视频，动作明确，适合验证两条路线是否识别正确。",
+      "reference": "arm wrestling"
+    },
+    {
+      "id": "camera_portrait",
+      "title": "摄像头人物近景",
+      "description": "先前采集的摄像头测试片段，没有明确的大幅动作。",
+      "reference": "无明确动作标签"
+    },
+    {
+      "id": "camera_capture_0_camera_20261121_143403",
+      "title": "新摄像头片段 1",
+      "description": "由测试台现场采集的短视频。",
+      "reference": "实时采集，参考标签未知"
+    },
+    {
+      "id": "camera_capture_1_camera_20261121_142735",
+      "title": "新摄像头片段 2",
+      "description": "由测试台现场采集的短视频。",
+      "reference": "实时采集，参考标签未知"
+    },
+    {
+      "id": "camera_capture_2_camera_20261118_234053",
+      "title": "新摄像头片段 3",
+      "description": "由测试台现场采集的短视频。",
+      "reference": "实时采集，参考标签未知"
+    }
+  ],
+  "duration_seconds": 31.72500409999998
+}

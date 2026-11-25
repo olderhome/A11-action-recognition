@@ -1,0 +1,94 @@
+[
+  {
+    "name": "tsn_amp",
+    "model": "tsn2d",
+    "frames": 8,
+    "image_size": 64,
+    "batch_size": 8,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 436.1884765625,
+    "max_memory_reserved_mib": 468.0
+  },
+  {
+    "name": "tsn_amp_checkpoint",
+    "model": "tsn2d",
+    "frames": 8,
+    "image_size": 64,
+    "batch_size": 8,
+    "extra": [
+      "--grad-checkpoint"
+    ],
+    "status": "ok",
+    "grad_checkpoint": true,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 327.8759765625,
+    "max_memory_reserved_mib": 400.0
+  },
+  {
+    "name": "tsn_fp32",
+    "model": "tsn2d",
+    "frames": 8,
+    "image_size": 64,
+    "batch_size": 8,
+    "extra": [
+      "--no-amp"
+    ],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": false,
+    "pretrained": false,
+    "max_memory_allocated_mib": 606.45166015625,
+    "max_memory_reserved_mib": 634.0
+  },
+  {
+    "name": "r3d_amp",
+    "model": "r3d18",
+    "frames": 8,
+    "image_size": 64,
+    "batch_size": 8,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 389.564453125,
+    "max_memory_reserved_mib": 454.0
+  },
+  {
+    "name": "r3d_amp_checkpoint",
+    "model": "r3d18",
+    "frames": 8,
+    "image_size": 64,
+    "batch_size": 8,
+    "extra": [
+      "--grad-checkpoint"
+    ],
+    "status": "ok",
+    "grad_checkpoint": true,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 371.04052734375,
+    "max_memory_reserved_mib": 424.0
+  },
+  {
+    "name": "r2plus_fp32",
+    "model": "r2plus1d18",
+    "frames": 8,
+    "image_size": 64,
+    "batch_size": 2,
+    "extra": [
+      "--no-amp"
+    ],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": false,
+    "pretrained": false,
+    "max_memory_allocated_mib": 405.99755859375,
+    "max_memory_reserved_mib": 448.0
+  }
+]

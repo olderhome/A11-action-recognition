@@ -1,0 +1,30 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T00:00:00.000Z" agent="Codex" version="32.7.4">
+  <diagram id="a11-pipeline" name="实验流程">
+    <mxGraphModel dx="1300" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="430" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="download" value="下载 / 校验 UCF101&#xa;SHA256" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="30" y="160" width="130" height="70" as="geometry"/></mxCell>
+        <mxCell id="extract" value="解压与类别检查&#xa;101 类 / 13320 视频" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="190" y="160" width="150" height="70" as="geometry"/></mxCell>
+        <mxCell id="split" value="官方 split 1&#xa;group 隔离检查" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="370" y="160" width="140" height="70" as="geometry"/></mxCell>
+        <mxCell id="budget" value="2 GB 显存网格&#xa;AMP / 检查点" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1"><mxGeometry x="540" y="160" width="140" height="70" as="geometry"/></mxCell>
+        <mxCell id="feat" value="冻结特征提取&#xa;三条路线 / 三种采样" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="710" y="160" width="160" height="70" as="geometry"/></mxCell>
+        <mxCell id="head" value="3 seeds 分类头&#xa;验证集选模" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="900" y="160" width="140" height="70" as="geometry"/></mxCell>
+        <mxCell id="test" value="官方测试集一次评估" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="1070" y="120" width="180" height="60" as="geometry"/></mxCell>
+        <mxCell id="e1" style="endArrow=block;" edge="1" parent="1" source="download" target="extract"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="endArrow=block;" edge="1" parent="1" source="extract" target="split"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="endArrow=block;" edge="1" parent="1" source="split" target="budget"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="endArrow=block;" edge="1" parent="1" source="budget" target="feat"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="endArrow=block;" edge="1" parent="1" source="feat" target="head"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="endArrow=block;" edge="1" parent="1" source="head" target="test"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="stats" value="多种子统计与配对比较" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1"><mxGeometry x="1070" y="230" width="180" height="70" as="geometry"/></mxCell>
+        <mxCell id="errors" value="混淆矩阵与错误案例" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1"><mxGeometry x="900" y="300" width="140" height="60" as="geometry"/></mxCell>
+        <mxCell id="figs" value="数据图 / 报告 / 验收" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="710" y="300" width="160" height="60" as="geometry"/></mxCell>
+        <mxCell id="e7" style="endArrow=block;" edge="1" parent="1" source="test" target="stats"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" style="endArrow=block;" edge="1" parent="1" source="test" target="errors"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" style="endArrow=block;" edge="1" parent="1" source="stats" target="figs"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" style="endArrow=block;" edge="1" parent="1" source="errors" target="figs"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

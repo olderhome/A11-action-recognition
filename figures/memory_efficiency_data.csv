@@ -1,0 +1,7 @@
+experiment,model,batch_size,allocated_mib,reserved_mib
+tsn_amp,tsn2d,8,436.1884765625,468.0
+tsn_amp_checkpoint,tsn2d,8,327.8759765625,400.0
+tsn_fp32,tsn2d,8,606.45166015625,634.0
+r3d_amp,r3d18,8,389.564453125,454.0
+r3d_amp_checkpoint,r3d18,8,371.04052734375,424.0
+r2plus_fp32,r2plus1d18,2,405.99755859375,448.0
