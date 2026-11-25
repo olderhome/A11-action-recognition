@@ -1,0 +1,18 @@
+{
+  "loss": 3.47705078125,
+  "top1": 0.9375,
+  "top5": 0.9375,
+  "samples": 16,
+  "elapsed_seconds": 1.0534623000057763,
+  "throughput_videos_per_second": 15.188013847208646,
+  "decode_seconds": 0.4823860954493284,
+  "adaptive_score_seconds": 0.0,
+  "adaptive_score_candidates": 0.0,
+  "max_memory_allocated_mib": 395.86083984375,
+  "max_memory_reserved_mib": 452.0,
+  "best_epoch": 1,
+  "best_validation_top1": 0.5,
+  "run_elapsed_seconds": 7.574358300000313,
+  "parameters": 23714981,
+  "parameter_mib": 90.46547317504883
+}

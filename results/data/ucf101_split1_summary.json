@@ -1,0 +1,13 @@
+{
+  "split": 1,
+  "classes": 101,
+  "train_videos": 9537,
+  "train_fit_videos": 8476,
+  "validation_videos": 1061,
+  "test_videos": 3783,
+  "train_class_groups": 1616,
+  "validation_class_groups": 202,
+  "test_class_groups": 707,
+  "group_overlap": 0,
+  "video_root": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\mmaction2-main\\data\\ucf101\\videos"
+}

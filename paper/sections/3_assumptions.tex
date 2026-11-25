@@ -1,0 +1,42 @@
+\section{模型假设与符号说明}
+
+\subsection{基本假设}
+
+\begin{enumerate}
+  \item UCF101 官方标签和 split 1 是本研究的真实动作标签与权威评估边界；修复文件须与参考
+        清单大小、CRC 和可解码性一致。
+  \item 同一 group 中视频可能共享演员、场景或拍摄条件，因此验证与训练必须按 group 隔离，
+        不能只随机划分视频。
+  \item Kinetics-400 预训练知识可在 UCF101 上迁移；冻结主干后的特征可视为固定视频表示，
+        分类头学习 UCF101 的决策边界。
+  \item 视频级概率由同一视频的输入片段或帧特征聚合得到，测试时不做标签相关的人工筛选。
+  \item 显存预算以训练期间的 PyTorch CUDA allocator 为测量边界，同时采用 allocated 和
+        reserved 峰值，避免只报告参数显存而遗漏激活与缓存。
+  \item 三个训练种子改变分类头初始化、优化顺序和随机采样抖动；冻结特征的随机种子差异不能
+        被误写成端到端模型种子差异。
+\end{enumerate}
+
+\subsection{主要符号}
+
+\begin{table}[H]
+  \centering
+  \caption{主要符号}
+  \label{tab:symbols}
+  \begin{tabular}{cl}
+    \toprule
+    符号 & 含义 \\
+    \midrule
+    $K$ & 每个视频使用的帧数 \\
+    $H,W$ & 空间输入的高和宽 \\
+    $x_k$ & 第 $k$ 个采样帧 \\
+    $z_k$ & 第 $k$ 帧的空间特征 \\
+    $q_v$ & 视频 $v$ 的聚合表示 \\
+    $y_v$ & 视频真实类别 \\
+    $p_\theta(y\mid v)$ & 模型预测的视频级类别概率 \\
+    $M_{\mathrm{a}}(t),M_{\mathrm{r}}(t)$ & 时刻 $t$ 的 allocated/reserved 显存 \\
+    $A_1,A_5$ & Top-1 与 Top-5 准确率 \\
+    $\Delta A$ & 候选相对基线 Top-1 的绝对百分点差 \\
+    $T_d,T_s$ & 解码时间与自适应采样评分时间 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

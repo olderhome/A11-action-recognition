@@ -1,0 +1,110 @@
+[
+  {
+    "file": "error_01.jpg",
+    "path": "HandstandWalking/v_HandstandWalking_g02_c02.avi",
+    "true_index": 37,
+    "true_class": "HandstandWalking",
+    "predicted_index": 56,
+    "predicted_class": "ParallelBars",
+    "confidence": 0.9999920129776001
+  },
+  {
+    "file": "error_02.jpg",
+    "path": "BodyWeightSquats/v_BodyWeightSquats_g05_c04.avi",
+    "true_index": 14,
+    "true_class": "BodyWeightSquats",
+    "predicted_index": 51,
+    "predicted_class": "Lunges",
+    "confidence": 0.9999368190765381
+  },
+  {
+    "file": "error_03.jpg",
+    "path": "HandstandPushups/v_HandStandPushups_g04_c02.avi",
+    "true_index": 36,
+    "true_class": "HandstandPushups",
+    "predicted_index": 16,
+    "predicted_class": "BoxingPunchingBag",
+    "confidence": 0.9998050332069397
+  },
+  {
+    "file": "error_04.jpg",
+    "path": "SoccerJuggling/v_SoccerJuggling_g01_c01.avi",
+    "true_index": 83,
+    "true_class": "SoccerJuggling",
+    "predicted_index": 47,
+    "predicted_class": "JumpRope",
+    "confidence": 0.9996566772460938
+  },
+  {
+    "file": "error_05.jpg",
+    "path": "JumpRope/v_JumpRope_g02_c03.avi",
+    "true_index": 47,
+    "true_class": "JumpRope",
+    "predicted_index": 100,
+    "predicted_class": "YoYo",
+    "confidence": 0.9996084570884705
+  },
+  {
+    "file": "error_06.jpg",
+    "path": "ThrowDiscus/v_ThrowDiscus_g03_c03.avi",
+    "true_index": 92,
+    "true_class": "ThrowDiscus",
+    "predicted_index": 35,
+    "predicted_class": "HammerThrow",
+    "confidence": 0.9994611144065857
+  },
+  {
+    "file": "error_07.jpg",
+    "path": "BlowDryHair/v_BlowDryHair_g07_c07.avi",
+    "true_index": 12,
+    "true_class": "BlowDryHair",
+    "predicted_index": 33,
+    "predicted_class": "Haircut",
+    "confidence": 0.9992995262145996
+  },
+  {
+    "file": "error_08.jpg",
+    "path": "BoxingPunchingBag/v_BoxingPunchingBag_g06_c03.avi",
+    "true_index": 16,
+    "true_class": "BoxingPunchingBag",
+    "predicted_index": 17,
+    "predicted_class": "BoxingSpeedBag",
+    "confidence": 0.999219536781311
+  },
+  {
+    "file": "error_09.jpg",
+    "path": "PullUps/v_PullUps_g05_c03.avi",
+    "true_index": 69,
+    "true_class": "PullUps",
+    "predicted_index": 74,
+    "predicted_class": "RopeClimbing",
+    "confidence": 0.998910665512085
+  },
+  {
+    "file": "error_10.jpg",
+    "path": "LongJump/v_LongJump_g05_c05.avi",
+    "true_index": 50,
+    "true_class": "LongJump",
+    "predicted_index": 5,
+    "predicted_class": "BandMarching",
+    "confidence": 0.9985467791557312
+  },
+  {
+    "file": "error_11.jpg",
+    "path": "FrontCrawl/v_FrontCrawl_g04_c04.avi",
+    "true_index": 31,
+    "true_class": "FrontCrawl",
+    "predicted_index": 18,
+    "predicted_class": "BreastStroke",
+    "confidence": 0.9978886246681213
+  },
+  {
+    "file": "error_12.jpg",
+    "path": "MilitaryParade/v_MilitaryParade_g06_c04.avi",
+    "true_index": 52,
+    "true_class": "MilitaryParade",
+    "predicted_index": 5,
+    "predicted_class": "BandMarching",
+    "confidence": 0.9971277117729187
+  }
+]

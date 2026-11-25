@@ -1,0 +1,306 @@
+{
+  "samples": 3783,
+  "top1": 0.8419243986254296,
+  "mean_recall": 0.8372127583356174,
+  "worst_classes": [
+    {
+      "class_index": 100,
+      "class_name": "YoYo",
+      "support": 36,
+      "correct": 10,
+      "recall": 0.2777777777777778,
+      "precision": 0.4166666666666667
+    },
+    {
+      "class_index": 51,
+      "class_name": "Lunges",
+      "support": 37,
+      "correct": 14,
+      "recall": 0.3783783783783784,
+      "precision": 0.5833333333333334
+    },
+    {
+      "class_index": 37,
+      "class_name": "HandstandWalking",
+      "support": 34,
+      "correct": 13,
+      "recall": 0.38235294117647056,
+      "precision": 0.41935483870967744
+    },
+    {
+      "class_index": 34,
+      "class_name": "Hammering",
+      "support": 33,
+      "correct": 16,
+      "recall": 0.48484848484848486,
+      "precision": 0.7619047619047619
+    },
+    {
+      "class_index": 22,
+      "class_name": "CricketBowling",
+      "support": 36,
+      "correct": 18,
+      "recall": 0.5,
+      "precision": 0.4864864864864865
+    },
+    {
+      "class_index": 39,
+      "class_name": "HighJump",
+      "support": 37,
+      "correct": 19,
+      "recall": 0.5135135135135135,
+      "precision": 0.76
+    },
+    {
+      "class_index": 98,
+      "class_name": "WallPushups",
+      "support": 35,
+      "correct": 18,
+      "recall": 0.5142857142857142,
+      "precision": 0.9473684210526315
+    },
+    {
+      "class_index": 47,
+      "class_name": "JumpRope",
+      "support": 38,
+      "correct": 20,
+      "recall": 0.5263157894736842,
+      "precision": 0.8695652173913043
+    },
+    {
+      "class_index": 14,
+      "class_name": "BodyWeightSquats",
+      "support": 30,
+      "correct": 16,
+      "recall": 0.5333333333333333,
+      "precision": 0.6666666666666666
+    },
+    {
+      "class_index": 44,
+      "class_name": "JavelinThrow",
+      "support": 31,
+      "correct": 18,
+      "recall": 0.5806451612903226,
+      "precision": 0.46153846153846156
+    },
+    {
+      "class_index": 85,
+      "class_name": "StillRings",
+      "support": 32,
+      "correct": 20,
+      "recall": 0.625,
+      "precision": 0.8333333333333334
+    },
+    {
+      "class_index": 29,
+      "class_name": "FloorGymnastics",
+      "support": 36,
+      "correct": 23,
+      "recall": 0.6388888888888888,
+      "precision": 0.7666666666666667
+    },
+    {
+      "class_index": 28,
+      "class_name": "FieldHockeyPenalty",
+      "support": 40,
+      "correct": 26,
+      "recall": 0.65,
+      "precision": 0.7878787878787878
+    },
+    {
+      "class_index": 23,
+      "class_name": "CricketShot",
+      "support": 49,
+      "correct": 32,
+      "recall": 0.6530612244897959,
+      "precision": 0.5925925925925926
+    },
+    {
+      "class_index": 55,
+      "class_name": "Nunchucks",
+      "support": 35,
+      "correct": 24,
+      "recall": 0.6857142857142857,
+      "precision": 0.631578947368421
+    }
+  ],
+  "top_confusions": [
+    {
+      "true_index": 19,
+      "true_class": "BrushingTeeth",
+      "predicted_index": 77,
+      "predicted_class": "ShavingBeard",
+      "count": 10
+    },
+    {
+      "true_index": 100,
+      "true_class": "YoYo",
+      "predicted_index": 2,
+      "predicted_class": "Archery",
+      "count": 10
+    },
+    {
+      "true_index": 16,
+      "true_class": "BoxingPunchingBag",
+      "predicted_index": 17,
+      "predicted_class": "BoxingSpeedBag",
+      "count": 9
+    },
+    {
+      "true_index": 31,
+      "true_class": "FrontCrawl",
+      "predicted_index": 18,
+      "predicted_class": "BreastStroke",
+      "count": 9
+    },
+    {
+      "true_index": 35,
+      "true_class": "HammerThrow",
+      "predicted_index": 92,
+      "predicted_class": "ThrowDiscus",
+      "count": 9
+    },
+    {
+      "true_index": 52,
+      "true_class": "MilitaryParade",
+      "predicted_index": 5,
+      "predicted_class": "BandMarching",
+      "count": 9
+    },
+    {
+      "true_index": 29,
+      "true_class": "FloorGymnastics",
+      "predicted_index": 4,
+      "predicted_class": "BalanceBeam",
+      "count": 8
+    },
+    {
+      "true_index": 33,
+      "true_class": "Haircut",
+      "predicted_index": 12,
+      "predicted_class": "BlowDryHair",
+      "count": 8
+    },
+    {
+      "true_index": 98,
+      "true_class": "WallPushups",
+      "predicted_index": 99,
+      "predicted_class": "WritingOnBoard",
+      "count": 8
+    },
+    {
+      "true_index": 23,
+      "true_class": "CricketShot",
+      "predicted_index": 22,
+      "predicted_class": "CricketBowling",
+      "count": 7
+    },
+    {
+      "true_index": 39,
+      "true_class": "HighJump",
+      "predicted_index": 50,
+      "predicted_class": "LongJump",
+      "count": 7
+    },
+    {
+      "true_index": 69,
+      "true_class": "PullUps",
+      "predicted_index": 74,
+      "predicted_class": "RopeClimbing",
+      "count": 7
+    },
+    {
+      "true_index": 100,
+      "true_class": "YoYo",
+      "predicted_index": 45,
+      "predicted_class": "JugglingBalls",
+      "count": 7
+    },
+    {
+      "true_index": 12,
+      "true_class": "BlowDryHair",
+      "predicted_index": 33,
+      "predicted_class": "Haircut",
+      "count": 6
+    },
+    {
+      "true_index": 14,
+      "true_class": "BodyWeightSquats",
+      "predicted_index": 46,
+      "predicted_class": "JumpingJack",
+      "count": 6
+    },
+    {
+      "true_index": 22,
+      "true_class": "CricketBowling",
+      "predicted_index": 23,
+      "predicted_class": "CricketShot",
+      "count": 6
+    },
+    {
+      "true_index": 28,
+      "true_class": "FieldHockeyPenalty",
+      "predicted_index": 22,
+      "predicted_class": "CricketBowling",
+      "count": 6
+    },
+    {
+      "true_index": 47,
+      "true_class": "JumpRope",
+      "predicted_index": 100,
+      "predicted_class": "YoYo",
+      "count": 6
+    },
+    {
+      "true_index": 78,
+      "true_class": "Shotput",
+      "predicted_index": 44,
+      "predicted_class": "JavelinThrow",
+      "count": 6
+    },
+    {
+      "true_index": 0,
+      "true_class": "ApplyEyeMakeup",
+      "predicted_index": 1,
+      "predicted_class": "ApplyLipstick",
+      "count": 5
+    }
+  ],
+  "action_groups": [
+    {
+      "group": "人际交互",
+      "class_count": 4,
+      "support": 151,
+      "correct": 139,
+      "accuracy": 0.9205298013245033
+    },
+    {
+      "group": "人体动作",
+      "class_count": 11,
+      "support": 360,
+      "correct": 244,
+      "accuracy": 0.6777777777777778
+    },
+    {
+      "group": "物体交互",
+      "class_count": 15,
+      "support": 554,
+      "correct": 474,
+      "accuracy": 0.855595667870036
+    },
+    {
+      "group": "演奏乐器",
+      "class_count": 10,
+      "support": 401,
+      "correct": 380,
+      "accuracy": 0.9476309226932669
+    },
+    {
+      "group": "体育运动",
+      "class_count": 61,
+      "support": 2317,
+      "correct": 1948,
+      "accuracy": 0.8407423392317652
+    }
+  ]
+}

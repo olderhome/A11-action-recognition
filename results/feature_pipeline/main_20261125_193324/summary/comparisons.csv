@@ -1,0 +1,4 @@
+candidate,candidate_probe,baseline,seeds,delta_mean,delta_std,meets_4pp,paired_p_value
+tsn2d_uniform,linear,r3d18_uniform,"[0, 1, 2]",0.0492554505666097,0.005003898034480712,True,0.0034225750904729305
+tsn2d_uniform,temporal,r3d18_uniform,"[0, 1, 2]",0.06335357824961345,0.006818413902299992,True,0.0038388115383814194
+r2plus1d18_uniform,linear,r3d18_uniform,"[0, 1, 2]",0.07604193687438965,0.0021366561713016085,True,0.0002630693713964941

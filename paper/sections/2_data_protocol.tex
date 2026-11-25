@@ -1,0 +1,48 @@
+\section{数据与实验协议}
+
+\subsection{UCF101 数据完整性}
+
+UCF101 共包含 101 类、13320 个视频。原始压缩包存在局部损坏，下载后对每个成员执行了恢复和
+校验。最终 13320 个 AVI 全部存在，类别目录为 101 个，与参考清单相比缺失数为 0、字节大小
+不一致数为 0，逐文件首帧解码失败数为 0。该检查排除了“文件存在但内容截断”仍被计入实验的
+情况。
+
+\subsection{官方切分与无泄漏验证}
+
+主实验使用官方 split 1，训练集 9537 个视频，测试集 3783 个视频。为了选择训练轮次，从官方
+训练集中按类别固定留出两个 group 作为验证集，共 1061 个视频，剩余 8476 个视频用于拟合。
+设训练拟合、验证和测试的 group 集合分别为 $G_{\mathrm{fit}}$、$G_{\mathrm{val}}$、
+$G_{\mathrm{test}}$，则必须满足
+\begin{equation}
+  G_{\mathrm{fit}}\cap G_{\mathrm{val}}
+  =G_{\mathrm{fit}}\cap G_{\mathrm{test}}
+  =G_{\mathrm{val}}\cap G_{\mathrm{test}}
+  =\varnothing .
+  \label{eq:group}
+\end{equation}
+实际检查的三个交集大小均为 0。测试集只用于最终报告，不参与分类头轮次选择。
+
+\subsection{预训练与比较口径}
+
+三种主路线均使用 Kinetics-400\cite{kinetics}预训练信息。TSN-2D 使用 ResNet-50 二维骨干\cite{imagenet}，R3D-18 与
+R(2+1)D-18 使用对应的 Kinetics-400 三维权重。主实验冻结预训练主干，只训练视频级分类头或
+时序聚合头，因此本文将其准确表述为“冻结主干迁移训练”，而不称为端到端全网络微调。
+
+主对照统一为 8 帧、$112\times112$、101 类输出、官方 split 1 和相同验证 group。批大小依据
+各模型的显存预检独立选择，最终以实测 2 GiB 硬门禁为准。这样比较的是同一资源上限下的路线
+可实现性，而不是人为把三条路线压成相同参数规模。
+
+\begin{table}[H]
+  \centering
+  \caption{主实验配置}
+  \label{tab:main_protocol}
+  \begin{tabular}{lccc}
+    \toprule
+    路线 & 主干 & 时序表示 & 预训练 \\
+    \midrule
+    TSN-2D & ResNet-50 & 8 段特征；均值或时序注意力 & Kinetics-400 \\
+    朴素 3D & R3D-18 & 三维联合卷积 + 全局池化 & Kinetics-400 \\
+    轻量 3D & R(2+1)D-18 & 空间/时间分解卷积 + 全局池化 & Kinetics-400 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

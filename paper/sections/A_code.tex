@@ -1,0 +1,38 @@
+\vspace{1.1em}
+
+正式实验的一键入口：
+
+\begin{lstlisting}[language=bash]
+powershell -ExecutionPolicy Bypass -File .\run_full_experiment.ps1
+\end{lstlisting}
+
+显存硬门禁的核心逻辑：
+
+\begin{lstlisting}[language=Python]
+peak_allocated = torch.cuda.max_memory_allocated() / (1024**2)
+peak_reserved = torch.cuda.max_memory_reserved() / (1024**2)
+
+if peak_allocated > 2048 or peak_reserved > 2048:
+    raise RuntimeError('2 GiB memory budget exceeded')
+\end{lstlisting}
+
+时序注意力头的核心聚合：
+
+\begin{lstlisting}[language=Python]
+value = self.projection(features)
+value = value + self.position[:, :value.shape[1]]
+value = self.encoder(value)
+value = self.norm(value.mean(dim=1))
+logits = self.classifier(value)
+\end{lstlisting}
+
+主实验输出包括：
+
+\begin{lstlisting}[language=bash]
+results/feature_pipeline/main_20261125_193324/
+  matrix.json
+  summary/aggregate.csv
+  summary/comparisons.csv
+  error_analysis/
+  figures/
+\end{lstlisting}

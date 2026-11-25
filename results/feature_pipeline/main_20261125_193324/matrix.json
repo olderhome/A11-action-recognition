@@ -1,0 +1,1658 @@
+[
+  {
+    "suite": "main",
+    "config": "tsn2d_uniform",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\tsn2d_uniform_s0_f8_r112_20261125_193328",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\tsn2d_uniform_s0_f8_r112_20261125_193328_s0\\metrics.json",
+    "top1": 0.8189267516136169,
+    "top5": 0.9579698443412781,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.78736729999946,
+        "throughput_videos_per_second": 49.62896339464814,
+        "decode_seconds": 209.72995138913393,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.825352500000008,
+        "throughput_videos_per_second": 42.73856735770417,
+        "decode_seconds": 23.417684664018452,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 71.40602040000158,
+        "throughput_videos_per_second": 52.97872614673701,
+        "decode_seconds": 80.44929637387395,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "main",
+    "config": "tsn2d_uniform",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\tsn2d_uniform_s0_f8_r112_20261125_193328",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\tsn2d_uniform_s0_f8_r112_20261125_193328_s1\\metrics.json",
+    "top1": 0.8136399388313293,
+    "top5": 0.9577054977416992,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.78736729999946,
+        "throughput_videos_per_second": 49.62896339464814,
+        "decode_seconds": 209.72995138913393,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.825352500000008,
+        "throughput_videos_per_second": 42.73856735770417,
+        "decode_seconds": 23.417684664018452,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 71.40602040000158,
+        "throughput_videos_per_second": 52.97872614673701,
+        "decode_seconds": 80.44929637387395,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "main",
+    "config": "tsn2d_uniform",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\tsn2d_uniform_s0_f8_r112_20261125_193328",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\tsn2d_uniform_s0_f8_r112_20261125_193328_s2\\metrics.json",
+    "top1": 0.8062384128570557,
+    "top5": 0.9611418843269348,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.78736729999946,
+        "throughput_videos_per_second": 49.62896339464814,
+        "decode_seconds": 209.72995138913393,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.825352500000008,
+        "throughput_videos_per_second": 42.73856735770417,
+        "decode_seconds": 23.417684664018452,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 71.40602040000158,
+        "throughput_videos_per_second": 52.97872614673701,
+        "decode_seconds": 80.44929637387395,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "main",
+    "config": "tsn2d_uniform",
+    "probe_type": "temporal",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\tsn2d_uniform_s0_f8_r112_20261125_193328",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\temporal\\tsn2d_uniform_s0_f8_r112_20261125_193328_s0\\metrics.json",
+    "top1": 0.8329367637634277,
+    "top5": 0.9574411511421204,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 988.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.78736729999946,
+        "throughput_videos_per_second": 49.62896339464814,
+        "decode_seconds": 209.72995138913393,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.825352500000008,
+        "throughput_videos_per_second": 42.73856735770417,
+        "decode_seconds": 23.417684664018452,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 71.40602040000158,
+        "throughput_videos_per_second": 52.97872614673701,
+        "decode_seconds": 80.44929637387395,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "main",
+    "config": "tsn2d_uniform",
+    "probe_type": "temporal",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\tsn2d_uniform_s0_f8_r112_20261125_193328",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\temporal\\tsn2d_uniform_s0_f8_r112_20261125_193328_s1\\metrics.json",
+    "top1": 0.8223631381988525,
+    "top5": 0.9558550715446472,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 988.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.78736729999946,
+        "throughput_videos_per_second": 49.62896339464814,
+        "decode_seconds": 209.72995138913393,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.825352500000008,
+        "throughput_videos_per_second": 42.73856735770417,
+        "decode_seconds": 23.417684664018452,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 71.40602040000158,
+        "throughput_videos_per_second": 52.97872614673701,
+        "decode_seconds": 80.44929637387395,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "main",
+    "config": "tsn2d_uniform",
+    "probe_type": "temporal",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\tsn2d_uniform_s0_f8_r112_20261125_193328",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\temporal\\tsn2d_uniform_s0_f8_r112_20261125_193328_s2\\metrics.json",
+    "top1": 0.8257995843887329,
+    "top5": 0.9463388323783875,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 990.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.78736729999946,
+        "throughput_videos_per_second": 49.62896339464814,
+        "decode_seconds": 209.72995138913393,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.825352500000008,
+        "throughput_videos_per_second": 42.73856735770417,
+        "decode_seconds": 23.417684664018452,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 71.40602040000158,
+        "throughput_videos_per_second": 52.97872614673701,
+        "decode_seconds": 80.44929637387395,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "main",
+    "config": "r3d18_uniform",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\r3d18_uniform_s0_f8_r112_20261125_194215",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\r3d18_uniform_s0_f8_r112_20261125_194215_s0\\metrics.json",
+    "top1": 0.7639439105987549,
+    "top5": 0.9444884657859802,
+    "max_memory_allocated_mib": 47.77294921875,
+    "max_memory_reserved_mib": 62.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 254.6121951999994,
+        "throughput_videos_per_second": 33.28984298392326,
+        "decode_seconds": 179.28128456883132,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 38.194290999999794,
+        "throughput_videos_per_second": 27.779020691862186,
+        "decode_seconds": 22.03161490149796,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 116.96867199999906,
+        "throughput_videos_per_second": 32.34199324755974,
+        "decode_seconds": 81.38923322409391,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      }
+    },
+    "parameters": 33218085,
+    "parameter_mib": 126.71693801879883
+  },
+  {
+    "suite": "main",
+    "config": "r3d18_uniform",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\r3d18_uniform_s0_f8_r112_20261125_194215",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\r3d18_uniform_s0_f8_r112_20261125_194215_s1\\metrics.json",
+    "top1": 0.7665873169898987,
+    "top5": 0.9458101391792297,
+    "max_memory_allocated_mib": 47.77294921875,
+    "max_memory_reserved_mib": 62.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 254.6121951999994,
+        "throughput_videos_per_second": 33.28984298392326,
+        "decode_seconds": 179.28128456883132,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 38.194290999999794,
+        "throughput_videos_per_second": 27.779020691862186,
+        "decode_seconds": 22.03161490149796,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 116.96867199999906,
+        "throughput_videos_per_second": 32.34199324755974,
+        "decode_seconds": 81.38923322409391,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      }
+    },
+    "parameters": 33218085,
+    "parameter_mib": 126.71693801879883
+  },
+  {
+    "suite": "main",
+    "config": "r3d18_uniform",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\r3d18_uniform_s0_f8_r112_20261125_194215",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\r3d18_uniform_s0_f8_r112_20261125_194215_s2\\metrics.json",
+    "top1": 0.7605075240135193,
+    "top5": 0.9442241191864014,
+    "max_memory_allocated_mib": 47.77294921875,
+    "max_memory_reserved_mib": 62.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 254.6121951999994,
+        "throughput_videos_per_second": 33.28984298392326,
+        "decode_seconds": 179.28128456883132,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 38.194290999999794,
+        "throughput_videos_per_second": 27.779020691862186,
+        "decode_seconds": 22.03161490149796,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 116.96867199999906,
+        "throughput_videos_per_second": 32.34199324755974,
+        "decode_seconds": 81.38923322409391,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 219.326171875,
+        "max_memory_reserved_mib": 240.0
+      }
+    },
+    "parameters": 33218085,
+    "parameter_mib": 126.71693801879883
+  },
+  {
+    "suite": "main",
+    "config": "r2plus1d18_uniform",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\r2plus1d18_uniform_s0_f8_r112_20261125_195251",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\r2plus1d18_uniform_s0_f8_r112_20261125_195251_s0\\metrics.json",
+    "top1": 0.8419243693351746,
+    "top5": 0.9643139839172363,
+    "max_memory_allocated_mib": 47.77294921875,
+    "max_memory_reserved_mib": 62.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 373.73934609999924,
+        "throughput_videos_per_second": 22.678907341300174,
+        "decode_seconds": 190.6122344424948,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 52.96182969999791,
+        "throughput_videos_per_second": 20.033295790761585,
+        "decode_seconds": 21.83586007822305,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 170.43081800000073,
+        "throughput_videos_per_second": 22.196689802896937,
+        "decode_seconds": 73.25745491310954,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      }
+    },
+    "parameters": 31351938,
+    "parameter_mib": 119.59815216064453
+  },
+  {
+    "suite": "main",
+    "config": "r2plus1d18_uniform",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\r2plus1d18_uniform_s0_f8_r112_20261125_195251",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\r2plus1d18_uniform_s0_f8_r112_20261125_195251_s1\\metrics.json",
+    "top1": 0.8403382897377014,
+    "top5": 0.960877537727356,
+    "max_memory_allocated_mib": 47.77294921875,
+    "max_memory_reserved_mib": 62.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 373.73934609999924,
+        "throughput_videos_per_second": 22.678907341300174,
+        "decode_seconds": 190.6122344424948,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 52.96182969999791,
+        "throughput_videos_per_second": 20.033295790761585,
+        "decode_seconds": 21.83586007822305,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 170.43081800000073,
+        "throughput_videos_per_second": 22.196689802896937,
+        "decode_seconds": 73.25745491310954,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      }
+    },
+    "parameters": 31351938,
+    "parameter_mib": 119.59815216064453
+  },
+  {
+    "suite": "main",
+    "config": "r2plus1d18_uniform",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\features\\r2plus1d18_uniform_s0_f8_r112_20261125_195251",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\main\\probes\\linear\\r2plus1d18_uniform_s0_f8_r112_20261125_195251_s2\\metrics.json",
+    "top1": 0.8369019031524658,
+    "top5": 0.9614062309265137,
+    "max_memory_allocated_mib": 47.77294921875,
+    "max_memory_reserved_mib": 62.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 373.73934609999924,
+        "throughput_videos_per_second": 22.678907341300174,
+        "decode_seconds": 190.6122344424948,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 52.96182969999791,
+        "throughput_videos_per_second": 20.033295790761585,
+        "decode_seconds": 21.83586007822305,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 170.43081800000073,
+        "throughput_videos_per_second": 22.196689802896937,
+        "decode_seconds": 73.25745491310954,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.32080078125,
+        "max_memory_reserved_mib": 218.0
+      }
+    },
+    "parameters": 31351938,
+    "parameter_mib": 119.59815216064453
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_dense",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_dense_s0_f8_r112_20261125_202310",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\linear\\tsn2d_dense_s0_f8_r112_20261125_202310_s0\\metrics.json",
+    "top1": 0.781126081943512,
+    "top5": 0.9373512864112854,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 146.7706212000012,
+        "throughput_videos_per_second": 57.749977009703706,
+        "decode_seconds": 111.19894228316844,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.105484499999875,
+        "throughput_videos_per_second": 44.014879684330985,
+        "decode_seconds": 13.908398294821382,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 67.27227299999868,
+        "throughput_videos_per_second": 56.23416351637285,
+        "decode_seconds": 49.25489925965667,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_dense",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_dense_s0_f8_r112_20261125_202310",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\linear\\tsn2d_dense_s0_f8_r112_20261125_202310_s1\\metrics.json",
+    "top1": 0.7829764485359192,
+    "top5": 0.938408613204956,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 146.7706212000012,
+        "throughput_videos_per_second": 57.749977009703706,
+        "decode_seconds": 111.19894228316844,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.105484499999875,
+        "throughput_videos_per_second": 44.014879684330985,
+        "decode_seconds": 13.908398294821382,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 67.27227299999868,
+        "throughput_videos_per_second": 56.23416351637285,
+        "decode_seconds": 49.25489925965667,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_dense",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_dense_s0_f8_r112_20261125_202310",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\linear\\tsn2d_dense_s0_f8_r112_20261125_202310_s2\\metrics.json",
+    "top1": 0.7607718110084534,
+    "top5": 0.9360295534133911,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 146.7706212000012,
+        "throughput_videos_per_second": 57.749977009703706,
+        "decode_seconds": 111.19894228316844,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.105484499999875,
+        "throughput_videos_per_second": 44.014879684330985,
+        "decode_seconds": 13.908398294821382,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 67.27227299999868,
+        "throughput_videos_per_second": 56.23416351637285,
+        "decode_seconds": 49.25489925965667,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_dense",
+    "probe_type": "temporal",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_dense_s0_f8_r112_20261125_202310",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\temporal\\tsn2d_dense_s0_f8_r112_20261125_202310_s0\\metrics.json",
+    "top1": 0.7890562415122986,
+    "top5": 0.938408613204956,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 990.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 146.7706212000012,
+        "throughput_videos_per_second": 57.749977009703706,
+        "decode_seconds": 111.19894228316844,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.105484499999875,
+        "throughput_videos_per_second": 44.014879684330985,
+        "decode_seconds": 13.908398294821382,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 67.27227299999868,
+        "throughput_videos_per_second": 56.23416351637285,
+        "decode_seconds": 49.25489925965667,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_dense",
+    "probe_type": "temporal",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_dense_s0_f8_r112_20261125_202310",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\temporal\\tsn2d_dense_s0_f8_r112_20261125_202310_s1\\metrics.json",
+    "top1": 0.7845624685287476,
+    "top5": 0.9386729598045349,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 988.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 146.7706212000012,
+        "throughput_videos_per_second": 57.749977009703706,
+        "decode_seconds": 111.19894228316844,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.105484499999875,
+        "throughput_videos_per_second": 44.014879684330985,
+        "decode_seconds": 13.908398294821382,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 67.27227299999868,
+        "throughput_videos_per_second": 56.23416351637285,
+        "decode_seconds": 49.25489925965667,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_dense",
+    "probe_type": "temporal",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_dense_s0_f8_r112_20261125_202310",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\temporal\\tsn2d_dense_s0_f8_r112_20261125_202310_s2\\metrics.json",
+    "top1": 0.7842981219291687,
+    "top5": 0.9376156330108643,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 988.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 146.7706212000012,
+        "throughput_videos_per_second": 57.749977009703706,
+        "decode_seconds": 111.19894228316844,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 24.105484499999875,
+        "throughput_videos_per_second": 44.014879684330985,
+        "decode_seconds": 13.908398294821382,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 67.27227299999868,
+        "throughput_videos_per_second": 56.23416351637285,
+        "decode_seconds": 49.25489925965667,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_adaptive",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_adaptive_s0_f8_r112_20261125_203122",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\linear\\tsn2d_adaptive_s0_f8_r112_20261125_203122_s0\\metrics.json",
+    "top1": 0.8030663132667542,
+    "top5": 0.9492465853691101,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 519.3718537000022,
+        "throughput_videos_per_second": 16.31971378428966,
+        "decode_seconds": 906.4764741361141,
+        "adaptive_score_seconds": 443.0646133720875,
+        "adaptive_score_candidates": 271232.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 67.96427029999904,
+        "throughput_videos_per_second": 15.611143845386286,
+        "decode_seconds": 109.02588217705488,
+        "adaptive_score_seconds": 53.46385795250535,
+        "adaptive_score_candidates": 33952.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 224.64881080000123,
+        "throughput_videos_per_second": 16.839617296562956,
+        "decode_seconds": 382.99543112516403,
+        "adaptive_score_seconds": 196.29850712418556,
+        "adaptive_score_candidates": 121056.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_adaptive",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_adaptive_s0_f8_r112_20261125_203122",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\linear\\tsn2d_adaptive_s0_f8_r112_20261125_203122_s1\\metrics.json",
+    "top1": 0.7935500741004944,
+    "top5": 0.9450171589851379,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 519.3718537000022,
+        "throughput_videos_per_second": 16.31971378428966,
+        "decode_seconds": 906.4764741361141,
+        "adaptive_score_seconds": 443.0646133720875,
+        "adaptive_score_candidates": 271232.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 67.96427029999904,
+        "throughput_videos_per_second": 15.611143845386286,
+        "decode_seconds": 109.02588217705488,
+        "adaptive_score_seconds": 53.46385795250535,
+        "adaptive_score_candidates": 33952.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 224.64881080000123,
+        "throughput_videos_per_second": 16.839617296562956,
+        "decode_seconds": 382.99543112516403,
+        "adaptive_score_seconds": 196.29850712418556,
+        "adaptive_score_candidates": 121056.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_adaptive",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_adaptive_s0_f8_r112_20261125_203122",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\linear\\tsn2d_adaptive_s0_f8_r112_20261125_203122_s2\\metrics.json",
+    "top1": 0.798836886882782,
+    "top5": 0.9503039717674255,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 519.3718537000022,
+        "throughput_videos_per_second": 16.31971378428966,
+        "decode_seconds": 906.4764741361141,
+        "adaptive_score_seconds": 443.0646133720875,
+        "adaptive_score_candidates": 271232.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 67.96427029999904,
+        "throughput_videos_per_second": 15.611143845386286,
+        "decode_seconds": 109.02588217705488,
+        "adaptive_score_seconds": 53.46385795250535,
+        "adaptive_score_candidates": 33952.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 224.64881080000123,
+        "throughput_videos_per_second": 16.839617296562956,
+        "decode_seconds": 382.99543112516403,
+        "adaptive_score_seconds": 196.29850712418556,
+        "adaptive_score_candidates": 121056.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_adaptive",
+    "probe_type": "temporal",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_adaptive_s0_f8_r112_20261125_203122",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\temporal\\tsn2d_adaptive_s0_f8_r112_20261125_203122_s0\\metrics.json",
+    "top1": 0.823420524597168,
+    "top5": 0.9497752785682678,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 988.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 519.3718537000022,
+        "throughput_videos_per_second": 16.31971378428966,
+        "decode_seconds": 906.4764741361141,
+        "adaptive_score_seconds": 443.0646133720875,
+        "adaptive_score_candidates": 271232.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 67.96427029999904,
+        "throughput_videos_per_second": 15.611143845386286,
+        "decode_seconds": 109.02588217705488,
+        "adaptive_score_seconds": 53.46385795250535,
+        "adaptive_score_candidates": 33952.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 224.64881080000123,
+        "throughput_videos_per_second": 16.839617296562956,
+        "decode_seconds": 382.99543112516403,
+        "adaptive_score_seconds": 196.29850712418556,
+        "adaptive_score_candidates": 121056.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_adaptive",
+    "probe_type": "temporal",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_adaptive_s0_f8_r112_20261125_203122",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\temporal\\tsn2d_adaptive_s0_f8_r112_20261125_203122_s1\\metrics.json",
+    "top1": 0.8223631381988525,
+    "top5": 0.9476605653762817,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 990.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 519.3718537000022,
+        "throughput_videos_per_second": 16.31971378428966,
+        "decode_seconds": 906.4764741361141,
+        "adaptive_score_seconds": 443.0646133720875,
+        "adaptive_score_candidates": 271232.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 67.96427029999904,
+        "throughput_videos_per_second": 15.611143845386286,
+        "decode_seconds": 109.02588217705488,
+        "adaptive_score_seconds": 53.46385795250535,
+        "adaptive_score_candidates": 33952.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 224.64881080000123,
+        "throughput_videos_per_second": 16.839617296562956,
+        "decode_seconds": 382.99543112516403,
+        "adaptive_score_seconds": 196.29850712418556,
+        "adaptive_score_candidates": 121056.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "sampling",
+    "config": "tsn2d_adaptive",
+    "probe_type": "temporal",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\features\\tsn2d_adaptive_s0_f8_r112_20261125_203122",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\sampling\\probes\\temporal\\tsn2d_adaptive_s0_f8_r112_20261125_203122_s2\\metrics.json",
+    "top1": 0.8149616122245789,
+    "top5": 0.9455457925796509,
+    "max_memory_allocated_mib": 963.5224609375,
+    "max_memory_reserved_mib": 988.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 519.3718537000022,
+        "throughput_videos_per_second": 16.31971378428966,
+        "decode_seconds": 906.4764741361141,
+        "adaptive_score_seconds": 443.0646133720875,
+        "adaptive_score_candidates": 271232.0,
+        "max_memory_allocated_mib": 192.81298828125,
+        "max_memory_reserved_mib": 262.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 67.96427029999904,
+        "throughput_videos_per_second": 15.611143845386286,
+        "decode_seconds": 109.02588217705488,
+        "adaptive_score_seconds": 53.46385795250535,
+        "adaptive_score_candidates": 33952.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 224.64881080000123,
+        "throughput_videos_per_second": 16.839617296562956,
+        "decode_seconds": 382.99543112516403,
+        "adaptive_score_seconds": 196.29850712418556,
+        "adaptive_score_candidates": 121056.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 266.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_time_k16_r64",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f16_r64_20261125_204940",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\linear\\tsn2d_uniform_s0_f16_r64_20261125_204940_s0\\metrics.json",
+    "top1": 0.597673773765564,
+    "top5": 0.8435103893280029,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.95603169999958,
+        "throughput_videos_per_second": 49.57999969766507,
+        "decode_seconds": 246.07459791749716,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 250.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 28.197215699998196,
+        "throughput_videos_per_second": 37.62782862281214,
+        "decode_seconds": 30.701066210865974,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 77.71914409999954,
+        "throughput_videos_per_second": 48.675265840968294,
+        "decode_seconds": 106.6645435243845,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_time_k16_r64",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f16_r64_20261125_204940",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\linear\\tsn2d_uniform_s0_f16_r64_20261125_204940_s1\\metrics.json",
+    "top1": 0.5992597937583923,
+    "top5": 0.8482685089111328,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.95603169999958,
+        "throughput_videos_per_second": 49.57999969766507,
+        "decode_seconds": 246.07459791749716,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 250.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 28.197215699998196,
+        "throughput_videos_per_second": 37.62782862281214,
+        "decode_seconds": 30.701066210865974,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 77.71914409999954,
+        "throughput_videos_per_second": 48.675265840968294,
+        "decode_seconds": 106.6645435243845,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_time_k16_r64",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f16_r64_20261125_204940",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\linear\\tsn2d_uniform_s0_f16_r64_20261125_204940_s2\\metrics.json",
+    "top1": 0.601638913154602,
+    "top5": 0.8538196682929993,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.95603169999958,
+        "throughput_videos_per_second": 49.57999969766507,
+        "decode_seconds": 246.07459791749716,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 250.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 28.197215699998196,
+        "throughput_videos_per_second": 37.62782862281214,
+        "decode_seconds": 30.701066210865974,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 77.71914409999954,
+        "throughput_videos_per_second": 48.675265840968294,
+        "decode_seconds": 106.6645435243845,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_time_k16_r64",
+    "probe_type": "temporal",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f16_r64_20261125_204940",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\temporal\\tsn2d_uniform_s0_f16_r64_20261125_204940_s0\\metrics.json",
+    "top1": 0.6209357380867004,
+    "top5": 0.821041464805603,
+    "max_memory_allocated_mib": 1885.2099609375,
+    "max_memory_reserved_mib": 1912.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.95603169999958,
+        "throughput_videos_per_second": 49.57999969766507,
+        "decode_seconds": 246.07459791749716,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 250.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 28.197215699998196,
+        "throughput_videos_per_second": 37.62782862281214,
+        "decode_seconds": 30.701066210865974,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 77.71914409999954,
+        "throughput_videos_per_second": 48.675265840968294,
+        "decode_seconds": 106.6645435243845,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_time_k16_r64",
+    "probe_type": "temporal",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f16_r64_20261125_204940",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\temporal\\tsn2d_uniform_s0_f16_r64_20261125_204940_s1\\metrics.json",
+    "top1": 0.6167063117027283,
+    "top5": 0.8384879231452942,
+    "max_memory_allocated_mib": 1885.2099609375,
+    "max_memory_reserved_mib": 1912.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.95603169999958,
+        "throughput_videos_per_second": 49.57999969766507,
+        "decode_seconds": 246.07459791749716,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 250.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 28.197215699998196,
+        "throughput_videos_per_second": 37.62782862281214,
+        "decode_seconds": 30.701066210865974,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 77.71914409999954,
+        "throughput_videos_per_second": 48.675265840968294,
+        "decode_seconds": 106.6645435243845,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_time_k16_r64",
+    "probe_type": "temporal",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f16_r64_20261125_204940",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\temporal\\tsn2d_uniform_s0_f16_r64_20261125_204940_s2\\metrics.json",
+    "top1": 0.6135342121124268,
+    "top5": 0.823420524597168,
+    "max_memory_allocated_mib": 1885.2099609375,
+    "max_memory_reserved_mib": 1912.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 170.95603169999958,
+        "throughput_videos_per_second": 49.57999969766507,
+        "decode_seconds": 246.07459791749716,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 194.18798828125,
+        "max_memory_reserved_mib": 250.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 28.197215699998196,
+        "throughput_videos_per_second": 37.62782862281214,
+        "decode_seconds": 30.701066210865974,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 77.71914409999954,
+        "throughput_videos_per_second": 48.675265840968294,
+        "decode_seconds": 106.6645435243845,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 198.31298828125,
+        "max_memory_reserved_mib": 298.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_space_k4_r128",
+    "probe_type": "linear",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f4_r128_20261125_210121",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\linear\\tsn2d_uniform_s0_f4_r128_20261125_210121_s0\\metrics.json",
+    "top1": 0.8181337118148804,
+    "top5": 0.9582341909408569,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 115.1058105000011,
+        "throughput_videos_per_second": 73.63659543494478,
+        "decode_seconds": 137.50466462224722,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 20.282790499997645,
+        "throughput_videos_per_second": 52.310356407818894,
+        "decode_seconds": 17.55206859484315,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 53.1196987000003,
+        "throughput_videos_per_second": 71.21651840242797,
+        "decode_seconds": 59.342688366770744,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_space_k4_r128",
+    "probe_type": "linear",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f4_r128_20261125_210121",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\linear\\tsn2d_uniform_s0_f4_r128_20261125_210121_s1\\metrics.json",
+    "top1": 0.827385663986206,
+    "top5": 0.964842677116394,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 115.1058105000011,
+        "throughput_videos_per_second": 73.63659543494478,
+        "decode_seconds": 137.50466462224722,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 20.282790499997645,
+        "throughput_videos_per_second": 52.310356407818894,
+        "decode_seconds": 17.55206859484315,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 53.1196987000003,
+        "throughput_videos_per_second": 71.21651840242797,
+        "decode_seconds": 59.342688366770744,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_space_k4_r128",
+    "probe_type": "linear",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f4_r128_20261125_210121",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\linear\\tsn2d_uniform_s0_f4_r128_20261125_210121_s2\\metrics.json",
+    "top1": 0.8213058114051819,
+    "top5": 0.9637852907180786,
+    "max_memory_allocated_mib": 129.2119140625,
+    "max_memory_reserved_mib": 146.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 115.1058105000011,
+        "throughput_videos_per_second": 73.63659543494478,
+        "decode_seconds": 137.50466462224722,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 20.282790499997645,
+        "throughput_videos_per_second": 52.310356407818894,
+        "decode_seconds": 17.55206859484315,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 53.1196987000003,
+        "throughput_videos_per_second": 71.21651840242797,
+        "decode_seconds": 59.342688366770744,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_space_k4_r128",
+    "probe_type": "temporal",
+    "seed": 0,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f4_r128_20261125_210121",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\temporal\\tsn2d_uniform_s0_f4_r128_20261125_210121_s0\\metrics.json",
+    "top1": 0.8429816961288452,
+    "top5": 0.9577054977416992,
+    "max_memory_allocated_mib": 507.04296875,
+    "max_memory_reserved_mib": 522.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 115.1058105000011,
+        "throughput_videos_per_second": 73.63659543494478,
+        "decode_seconds": 137.50466462224722,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 20.282790499997645,
+        "throughput_videos_per_second": 52.310356407818894,
+        "decode_seconds": 17.55206859484315,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 53.1196987000003,
+        "throughput_videos_per_second": 71.21651840242797,
+        "decode_seconds": 59.342688366770744,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_space_k4_r128",
+    "probe_type": "temporal",
+    "seed": 1,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f4_r128_20261125_210121",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\temporal\\tsn2d_uniform_s0_f4_r128_20261125_210121_s1\\metrics.json",
+    "top1": 0.8416600227355957,
+    "top5": 0.9574411511421204,
+    "max_memory_allocated_mib": 507.04296875,
+    "max_memory_reserved_mib": 522.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 115.1058105000011,
+        "throughput_videos_per_second": 73.63659543494478,
+        "decode_seconds": 137.50466462224722,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 20.282790499997645,
+        "throughput_videos_per_second": 52.310356407818894,
+        "decode_seconds": 17.55206859484315,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 53.1196987000003,
+        "throughput_videos_per_second": 71.21651840242797,
+        "decode_seconds": 59.342688366770744,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  },
+  {
+    "suite": "budget",
+    "config": "budget_space_k4_r128",
+    "probe_type": "temporal",
+    "seed": 2,
+    "feature_dir": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\features\\tsn2d_uniform_s0_f4_r128_20261125_210121",
+    "metrics_path": "C:\\Users\\Administrator\\Desktop\\资料\\A11题\\results\\feature_pipeline\\main_20261125_193324\\budget\\probes\\temporal\\tsn2d_uniform_s0_f4_r128_20261125_210121_s2\\metrics.json",
+    "top1": 0.841131329536438,
+    "top5": 0.9579698443412781,
+    "max_memory_allocated_mib": 507.04296875,
+    "max_memory_reserved_mib": 522.0,
+    "feature_metrics": {
+      "train_fit": {
+        "samples": 8476,
+        "elapsed_seconds": 115.1058105000011,
+        "throughput_videos_per_second": 73.63659543494478,
+        "decode_seconds": 137.50466462224722,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "val": {
+        "samples": 1061,
+        "elapsed_seconds": 20.282790499997645,
+        "throughput_videos_per_second": 52.310356407818894,
+        "decode_seconds": 17.55206859484315,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      },
+      "test": {
+        "samples": 3783,
+        "elapsed_seconds": 53.1196987000003,
+        "throughput_videos_per_second": 71.21651840242797,
+        "decode_seconds": 59.342688366770744,
+        "adaptive_score_seconds": 0.0,
+        "adaptive_score_candidates": 0.0,
+        "max_memory_allocated_mib": 193.81298828125,
+        "max_memory_reserved_mib": 246.0
+      }
+    },
+    "parameters": 23714981,
+    "parameter_mib": 90.46547317504883
+  }
+]

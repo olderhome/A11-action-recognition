@@ -1,69 +1,102 @@
 # A11 资源约束下的视频动作识别时空解耦建模
 
-本项目研究 UCF101 上严格显存预算下的视频动作识别。工程包含：
+## 项目组成
 
-- TSN 式 2D 骨干与时序聚合；
-- R3D-18 朴素 3D 基线；
-- R(2+1)D-18 轻量 3D 路线；
-- 均匀、稠密、自适应采样；
-- AMP、梯度检查点与梯度累积显存预检；
-- Top-1/Top-5、吞吐、显存与多种子统计；
-- 混淆矩阵、分类别召回和代表性错误案例；
-- 可在浏览器中操作的两路线视频和摄像头演示。
+- `mmaction2-main/`：MMAction2 1.2.0 基线与交互式演示。
+- `a11code/`：正式 UCF101 数据、训练、特征、消融和错误分析代码。
+- `results/`：训练日志、checkpoint、特征和预测结果。
+- `figures/`：论文候选图、架构图和路线图。
+- `reports/`：分析、结果、图示和验收报告。
+- `paper/`：最终技术报告源码和 PDF。
+- `deliverables/`：可直接查看的论文 PDF 和可编辑答辩 PPTX。
 
-## 目录
+## 正式结果
 
-```text
-a11code/                   正式数据、特征、训练和图表代码
-mmaction2-main/            MMAction2 1.2.0 源码与演示
-reports/                   分析、结果、图示和验收报告
-figures/                   PNG、PDF 和 DrawIO 源文件
-results/validation/        轻量验证结果，不含大模型和特征矩阵
-demo/                      少量演示视频和截图
-```
+| 路线 | Top-1 | Top-5 |
+| --- | ---: | ---: |
+| R3D-18 基线 | 76.37±0.30% | 94.48±0.08% |
+| TSN-2D 线性 | 81.29±0.64% | 95.89±0.19% |
+| TSN-2D 时序注意力 | 82.70±0.54% | 95.32±0.60% |
+| R(2+1)D-18 | 83.97±0.26% | 96.22±0.19% |
 
-UCF101 原始数据、模型 checkpoint、运行时和大型中间特征不进入 Git 仓库。
-这些内容应由 `prepare_ucf101.ps1` 和实验脚本按需生成。
+两种候选相对 R3D-18 分别提升 6.34 和 7.60 个百分点，达到至少 4 个百分点的目标。
+正式实验最高 reserved 峰值为 1912 MiB，满足 2 GiB 训练预算。
+
+主实验采用冻结预训练主干的迁移训练，只训练分类头或时序聚合头，不是端到端全网络微调。
+完整数据、图表和验收结论见：
+
+- `reports/RESULTS_REPORT.md`
+- `reports/VERIFY_REPORT.md`
+- `paper/A11_论文.pdf`
+- `deliverables/A11_答辩汇报_答辩版.pptx`
 
 ## 环境
 
-推荐 Python 3.10/3.11、PyTorch 2.0.1 CUDA 11.8、MMEngine 0.10.7、
-MMCV-Lite 2.1.0。
+项目使用当前目录内的便携 Python：
 
 ```powershell
-python -m pip install torch==2.0.1 torchvision==0.15.2 `
-  --index-url https://download.pytorch.org/whl/cu118
-python -m pip install -e .\mmaction2-main --no-deps
-python -m pip install mmengine==0.10.7 mmcv-lite==2.1.0 `
-  opencv-python decord einops matplotlib scipy numpy pandas
+.\runtime\python311\python.exe -m pip check
 ```
 
-## UCF101
+已验证：
 
-从 UCF101 官方地址或许可相同的 Kaggle 镜像
-`pevogam/ucf101` 获取数据后，将视频放到：
+- Python 3.11
+- PyTorch 2.0.1 + CUDA 11.8
+- TorchVision 0.15.2
+- MMAction2 1.2.0
+- NVIDIA GTX 1050 Ti 4 GB
 
-```text
-mmaction2-main/data/ucf101/videos/<ClassName>/<video>.avi
-```
+## UCF101 准备
 
-官方 train/test 文件放到：
+官方 split 文件位于：
 
 ```text
 mmaction2-main/data/ucf101/annotations/ucfTrainTestlist/
 ```
 
-然后生成并校验文件清单：
+解压并验证视频：
 
 ```powershell
-python -m a11code.build_manifest
+powershell -ExecutionPolicy Bypass -File .\prepare_ucf101.ps1
 ```
 
-数据不会提交到 GitHub，避免数 GB 流量和仓库膨胀。
+该脚本校验：
 
-## 运行
+- 101 个动作类别；
+- 13,320 段视频；
+- 官方 split 1 的 9,537 个训练视频和 3,783 个测试视频；
+- 训练集与测试集没有共享“类别/group”键。
 
-### 浏览器演示
+## 正式实验
+
+类别、group 和文件清单：
+
+```powershell
+.\runtime\python311\python.exe -X utf8 -m a11code.build_manifest
+```
+
+2 GB 显存预检：
+
+```powershell
+.\runtime\python311\python.exe -X utf8 -m a11code.run_memory_matrix
+```
+
+路线、采样和时空预算完整实验（断点可续）：
+
+```powershell
+.\runtime\python311\python.exe -X utf8 -m a11code.run_feature_pipeline `
+  --suite all --seeds 0 1 2 --num-workers 2
+```
+
+错误归因：
+
+```powershell
+.\runtime\python311\python.exe -X utf8 -m a11code.analyze_errors `
+  --predictions results/.../predictions.csv `
+  --output-dir results/error_analysis
+```
+
+## 交互演示
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\run_comparison_app.ps1
@@ -71,45 +104,10 @@ powershell -ExecutionPolicy Bypass -File .\run_comparison_app.ps1
 
 打开 `http://127.0.0.1:7860`。
 
-### 两路线批量验证
+## 实验原则
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\run_batch_experiment.ps1
-```
-
-### 2 GB 显存预检
-
-```powershell
-python -m a11code.run_memory_matrix
-```
-
-### 路线、采样和时空预算实验
-
-```powershell
-python -m a11code.run_feature_pipeline --suite all
-```
-
-### 结果与图表
-
-```powershell
-python -m a11code.summarize_results `
-  --matrix results/feature_pipeline/.../matrix.json `
-  --output-dir results/summary
-python -m a11code.plot_feature_results `
-  --matrix results/feature_pipeline/.../matrix.json `
-  --output-dir figures
-```
-
-## 提交边界
-
-仓库只保存代码、配置、文档、图表、CSV/JSON 汇总和少量演示素材。
-以下内容不提交：
-
-- UCF101 视频和抽帧；
-- 预训练 checkpoint 和训练得到的 `.pth`；
-- 大型 `.npy` 特征矩阵；
-- Python 运行时和安装缓存；
-- 临时下载分片、日志和完整实验缓存。
-
-这些文件可通过 README、固定随机种子和脚本重建。
-
+- 所有路线使用 UCF101 split 1。
+- 比较采用相同帧数、空间尺寸、预训练数据和评价口径。
+- 训练头使用至少 3 个随机种子。
+- 训练显存同时记录 allocator 已分配和预留峰值，硬上限 2,048 MiB。
+- 所有结果、图表和结论必须能追溯到原始日志与预测文件。

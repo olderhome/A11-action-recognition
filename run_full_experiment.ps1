@@ -14,6 +14,7 @@ if (-not $SkipDataPreparation -and -not (Test-Path -LiteralPath $videoRoot)) {
 
 Push-Location $projectRoot
 try {
+    & $python -X utf8 -m a11code.validate_dataset
     & $python -X utf8 -m a11code.build_manifest
 
     $memoryOutput = (& $python -X utf8 -m a11code.run_memory_matrix)
@@ -25,7 +26,8 @@ try {
         'Memory matrix:'.Length).Trim()
 
     $pipelineOutput = (& $python -X utf8 -m a11code.run_feature_pipeline `
-        --suite all)
+        --suite all `
+        --num-workers 2)
     $pipelineOutput
     $matrixLine = $pipelineOutput |
         Where-Object { $_ -like 'Experiment matrix:*' } |

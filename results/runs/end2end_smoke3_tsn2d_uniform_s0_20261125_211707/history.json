@@ -1,0 +1,28 @@
+[
+  {
+    "epoch": 1,
+    "lr": 0.0005,
+    "train_loss": 4.3355712890625,
+    "train_samples": 32,
+    "train_elapsed_seconds": 5.211441799998283,
+    "train_throughput_videos_per_second": 6.140335290707946,
+    "decode_seconds": 0.9094571936875582,
+    "adaptive_score_seconds": 0.0,
+    "adaptive_score_candidates": 0.0,
+    "train_max_memory_allocated_mib": 395.86083984375,
+    "train_max_memory_reserved_mib": 452.0,
+    "validation": {
+      "loss": 3.8663330078125,
+      "top1": 0.5,
+      "top5": 0.625,
+      "samples": 16,
+      "elapsed_seconds": 1.0154126000052202,
+      "throughput_videos_per_second": 15.757141481125746,
+      "decode_seconds": 0.4231290044263005,
+      "adaptive_score_seconds": 0.0,
+      "adaptive_score_candidates": 0.0,
+      "max_memory_allocated_mib": 395.86083984375,
+      "max_memory_reserved_mib": 452.0
+    }
+  }
+]

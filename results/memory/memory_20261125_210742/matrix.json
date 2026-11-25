@@ -1,0 +1,168 @@
+[
+  {
+    "name": "tsn_amp",
+    "model": "tsn2d",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 4,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 551.28125,
+    "max_memory_reserved_mib": 610.0
+  },
+  {
+    "name": "tsn_amp_checkpoint",
+    "model": "tsn2d",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 4,
+    "extra": [
+      "--grad-checkpoint"
+    ],
+    "status": "ok",
+    "grad_checkpoint": true,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 396.8125,
+    "max_memory_reserved_mib": 428.0
+  },
+  {
+    "name": "tsn_fp32",
+    "model": "tsn2d",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 4,
+    "extra": [
+      "--no-amp"
+    ],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": false,
+    "pretrained": false,
+    "max_memory_allocated_mib": 834.7001953125,
+    "max_memory_reserved_mib": 950.0
+  },
+  {
+    "name": "r3d_amp",
+    "model": "r3d18",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 4,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 440.3486328125,
+    "max_memory_reserved_mib": 518.0
+  },
+  {
+    "name": "r3d_amp_checkpoint",
+    "model": "r3d18",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 4,
+    "extra": [
+      "--grad-checkpoint"
+    ],
+    "status": "ok",
+    "grad_checkpoint": true,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 421.38330078125,
+    "max_memory_reserved_mib": 470.0
+  },
+  {
+    "name": "r3d_fp32",
+    "model": "r3d18",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 4,
+    "extra": [
+      "--no-amp"
+    ],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": false,
+    "pretrained": false,
+    "max_memory_allocated_mib": 594.5400390625,
+    "max_memory_reserved_mib": 692.0
+  },
+  {
+    "name": "r2plus_amp",
+    "model": "r2plus1d18",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 2,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 494.767578125,
+    "max_memory_reserved_mib": 542.0
+  },
+  {
+    "name": "r2plus_amp_checkpoint",
+    "model": "r2plus1d18",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 2,
+    "extra": [
+      "--grad-checkpoint"
+    ],
+    "status": "ok",
+    "grad_checkpoint": true,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 450.8525390625,
+    "max_memory_reserved_mib": 520.0
+  },
+  {
+    "name": "r2plus_fp32",
+    "model": "r2plus1d18",
+    "frames": 8,
+    "image_size": 112,
+    "batch_size": 2,
+    "extra": [
+      "--no-amp"
+    ],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": false,
+    "pretrained": false,
+    "max_memory_allocated_mib": 720.92041015625,
+    "max_memory_reserved_mib": 834.0
+  },
+  {
+    "name": "tsn_time_k16_r64",
+    "model": "tsn2d",
+    "frames": 16,
+    "image_size": 64,
+    "batch_size": 8,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 661.4384765625,
+    "max_memory_reserved_mib": 728.0
+  },
+  {
+    "name": "tsn_space_k4_r128",
+    "model": "tsn2d",
+    "frames": 4,
+    "image_size": 128,
+    "batch_size": 8,
+    "extra": [],
+    "status": "ok",
+    "grad_checkpoint": false,
+    "amp": true,
+    "pretrained": false,
+    "max_memory_allocated_mib": 648.1884765625,
+    "max_memory_reserved_mib": 702.0
+  }
+]

@@ -1,0 +1,61 @@
+\section{资源约束、采样与显存优化}
+
+\subsection{2 GiB 硬门禁}
+
+每个训练或特征提取配置同时监测 allocator 已分配和预留峰值：
+\begin{equation}
+  M_{\max}=\max_t M_{\mathrm{a}}(t),\qquad
+  R_{\max}=\max_t M_{\mathrm{r}}(t),
+  \label{eq:memory}
+\end{equation}
+\begin{equation}
+  \mathrm{feasible}
+  =\mathbf{1}\left[
+  M_{\max}\leq2048\ \mathrm{MiB}
+  \land
+  R_{\max}\leq2048\ \mathrm{MiB}
+  \right].
+  \label{eq:feasible}
+\end{equation}
+任何峰值超过预算的进程立即终止，不保留其精度结果作为可行配置。
+
+\subsection{三种帧采样}
+
+均匀采样把视频分为 $K$ 段，在每段中心附近取样，测试时不加抖动：
+\begin{equation}
+  t_k=\left\lfloor
+  \left(k-\frac{1}{2}\right)\frac{T}{K}
+  \right\rfloor.
+  \label{eq:uniform}
+\end{equation}
+稠密采样在长度为 $(K-1)d+1$ 的连续窗口中每隔 $d$ 帧取一帧。它能保留短时动作，但可能遗漏
+长视频的另一动作阶段。自适应采样先均匀解码 32 个候选帧，计算灰度帧差运动强度
+\begin{equation}
+  m_t=\frac{1}{HW}
+  \left\lVert I_{t+1}-I_t\right\rVert_1,
+  \label{eq:motion}
+\end{equation}
+再用“运动强度 + 时间多样性”的贪心目标选择 $K$ 帧。候选帧数固定为 32，额外解码和评分
+时间分别记录为 $T_d$ 与 $T_s$，并与普通采样统一计入端到端吞吐。
+
+\subsection{混合精度、检查点与梯度累积}
+
+混合精度在前向和反向中使用 FP16 计算并保留 FP32 主权重与损失缩放\cite{amp}，以降低激活和中间张量
+显存。梯度检查点只保存模块边界，在反向传播时重算中间激活\cite{checkpoint}，以计算换显存。资源不足时以
+小批量 $B_s$ 和累积步数 $G$ 构造有效批量
+\begin{equation}
+  B_{\mathrm{eff}}=B_sG.
+  \label{eq:accumulation}
+\end{equation}
+所有技术消融均在同一输入、同一模型和同一步优化流程下比较，避免把批量变化与精度变化混杂。
+
+\subsection{时间与空间预算}
+
+为隔离“时间更长”与“空间更大”的选择，时间优先和空间优先配置保持每视频帧像素成本相同：
+\begin{equation}
+  K_tH_tW_t=K_sH_sW_s.
+  \label{eq:equal_cost}
+\end{equation}
+时间优先使用 $16\times64\times64$，空间优先使用 $4\times128\times128$，二者均为 65536
+个空间像素帧，批大小同为 8。均衡配置使用主实验的 $8\times112\times112$。最终同时比较
+准确率、峰值显存和吞吐，而不是只看一个指标。

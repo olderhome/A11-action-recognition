@@ -1,0 +1,71 @@
+\section{时空解耦模型}
+
+\subsection{TSN 式二维时序聚合}
+
+将视频全局时间轴等分为 $K$ 段，在第 $k$ 段采样一帧 $x_k$。所有帧共享同一个二维空间编码器
+$F_{2D}$：
+\begin{equation}
+  z_k=F_{2D}(x_k;\theta_{2D}),\qquad k=1,\ldots,K.
+  \label{eq:tsn_feature}
+\end{equation}
+空间编码器不包含时间卷积，时间关系只在视频级由聚合头建模\cite{tsn}。平均池化路线为
+\begin{equation}
+  q_v=\frac{1}{K}\sum_{k=1}^{K}z_k,\qquad
+  p_\theta(y\mid v)=\operatorname{softmax}(Wq_v+b).
+  \label{eq:tsn_mean}
+\end{equation}
+时序注意力头先把 $z_k$ 映射到 $d=256$ 的隐空间，并加入可学习位置编码：
+\begin{equation}
+  h_k=W_p z_k+e_k,\qquad
+  h^{(L)}=\operatorname{TransformerEncoder}(h^{(1:K)}).
+  \label{eq:temporal_attention}
+\end{equation}
+随后对位置感知表示做均值归一化并分类。位置编码使模型区分动作阶段顺序，而不只做无序帧集合
+聚合。
+
+\subsection{朴素三维卷积基线}
+
+朴素基线将 $K$ 帧作为三维张量\cite{i3d}
+$X\in\mathbb{R}^{B\times3\times K\times H\times W}$ 输入 R3D-18，通过三维卷积核直接联合
+学习空间和时间模式：
+\begin{equation}
+  \Phi=\operatorname{R3D}(X;\theta_{3D}),\qquad
+  p_\theta(y\mid v)=\operatorname{softmax}(W\operatorname{GAP}(\Phi)+b).
+  \label{eq:r3d}
+\end{equation}
+该路线不做显式时空分解，是题目要求的朴素 3D-CNN 参照。
+
+\subsection{轻量时空分解卷积}
+
+R(2+1)D 把三维卷积近似分解为一个空间二维卷积和一个时间一维卷积\cite{r21d}：
+\begin{equation}
+  \operatorname{Conv}_{3\times3\times3}
+  \approx
+  \operatorname{Conv}_{1\times3\times3}
+  \circ
+  \operatorname{Conv}_{3\times1\times1}.
+  \label{eq:r21d}
+\end{equation}
+分解增加非线性层数但减少单个三维卷积的参数和计算耦合，使空间外观与时间运动可以在中间层
+分别建模。该路线使用 R(2+1)D-18 的 Kinetics-400 预训练权重，并在同一 UCF101 切分上训练
+线性分类头。
+
+\subsection{训练目标}
+
+三条路线均使用多类交叉熵：
+\begin{equation}
+  \mathcal{L}(\theta)
+  =-\frac{1}{N}\sum_{i=1}^{N}
+  \sum_{c=1}^{101}\mathbf{1}(y_i=c)
+  \log p_\theta(c\mid v_i).
+  \label{eq:loss}
+\end{equation}
+分类头使用 AdamW 优化\cite{adamw}，学习率余弦退火。验证集按 Top-1 选择最佳轮次，最终仅在该轮次对官方
+测试集评估。Top-1 与 Top-5 定义为
+\begin{equation}
+  A_1=\frac{1}{N}\sum_{i=1}^{N}
+  \mathbf{1}\left(\hat y_i=y_i\right),\qquad
+  A_5=\frac{1}{N}\sum_{i=1}^{N}
+  \mathbf{1}\left(y_i\in\operatorname{Top5}(p_\theta(\cdot\mid v_i))\right).
+  \label{eq:metrics}
+\end{equation}
