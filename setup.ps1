@@ -60,7 +60,10 @@ if (-not $SkipWeights) {
         -File (Join-Path $projectRoot "download_model_weights.ps1")
 }
 
-& $venvPython -X utf8 -m a11code.collect_environment
+& $venvPython -X utf8 -m a11code.check_environment
+if ($LASTEXITCODE -ne 0) {
+    throw "Environment verification failed with exit code $LASTEXITCODE"
+}
 
 Write-Host ""
 Write-Host "Setup complete."

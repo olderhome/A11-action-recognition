@@ -7,7 +7,7 @@ This directory contains the formal UCF101 experiment pipeline.
 Use the project-local interpreter:
 
 ```powershell
-..\runtime\python311\python.exe -m pip check
+..\.venv\Scripts\python.exe -m pip check
 ```
 
 ## Data
@@ -16,13 +16,13 @@ After extracting UCF101 to `mmaction2-main/data/ucf101/videos`, build the
 official split manifests:
 
 ```powershell
-..\runtime\python311\python.exe -m a11code.build_manifest
+..\.venv\Scripts\python.exe -m a11code.build_manifest
 ```
 
 ## Smoke test
 
 ```powershell
-..\runtime\python311\python.exe -m a11code.train `
+..\.venv\Scripts\python.exe -m a11code.train `
   --model tsn2d --sampling uniform `
   --train-limit 64 --val-limit 64 --epochs 1 `
   --batch-size 1 --grad-accum 4 `
@@ -32,7 +32,7 @@ official split manifests:
 ## Full run
 
 ```powershell
-..\runtime\python311\python.exe -m a11code.train `
+..\.venv\Scripts\python.exe -m a11code.train `
   --model tsn2d --sampling uniform --seed 0 `
   --epochs 12 --batch-size 1 --grad-accum 8
 ```

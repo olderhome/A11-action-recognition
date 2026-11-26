@@ -47,7 +47,7 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1 -CpuOnly
 安装完成后使用：
 
 ```powershell
-.\venv\Scripts\python.exe -m pip check
+.\.venv\Scripts\python.exe -m pip check
 ```
 
 已验证：
@@ -87,26 +87,26 @@ powershell -ExecutionPolicy Bypass -File .\prepare_ucf101.ps1
 类别、group 和文件清单：
 
 ```powershell
-.\runtime\python311\python.exe -X utf8 -m a11code.build_manifest
+.\.venv\Scripts\python.exe -X utf8 -m a11code.build_manifest
 ```
 
 2 GB 显存预检：
 
 ```powershell
-.\runtime\python311\python.exe -X utf8 -m a11code.run_memory_matrix
+.\.venv\Scripts\python.exe -X utf8 -m a11code.run_memory_matrix
 ```
 
 路线、采样和时空预算完整实验（断点可续）：
 
 ```powershell
-.\runtime\python311\python.exe -X utf8 -m a11code.run_feature_pipeline `
+.\.venv\Scripts\python.exe -X utf8 -m a11code.run_feature_pipeline `
   --suite all --seeds 0 1 2 --num-workers 2
 ```
 
 错误归因：
 
 ```powershell
-.\runtime\python311\python.exe -X utf8 -m a11code.analyze_errors `
+.\.venv\Scripts\python.exe -X utf8 -m a11code.analyze_errors `
   --predictions results/.../predictions.csv `
   --output-dir results/error_analysis
 ```

@@ -36,7 +36,7 @@ Kinetics-400 权重进行识别，并在 `outputs/demo_tsn.mp4` 生成带预测�
 
 ```powershell
 cd .\mmaction2-main
-..\runtime\python311\python.exe -X utf8 demo\demo.py `
+..\.venv\Scripts\python.exe -X utf8 demo\demo.py `
   demo\demo_configs\tsn_r50_1x1x8_video_infer.py `
   checkpoints\tsn_r50_kinetics400.pth `
   demo\demo.mp4 `
