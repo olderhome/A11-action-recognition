@@ -1,4 +1,5 @@
 runtime/
+.venv/
 __pycache__/
 *.pyc
 .codex-finalizer
@@ -20,6 +21,7 @@ results/data/*.pkl
 outputs/comparison_results/
 outputs/camera_probe/
 outputs/camera_tests/
+outputs/
 outputs/**/*.mp4
 
 *.log

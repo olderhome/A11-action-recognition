@@ -1,7 +1,12 @@
+param(
+    [string]$Device = "auto"
+)
+
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$python = Join-Path $projectRoot "runtime\python311\python.exe"
+. (Join-Path $projectRoot "a11_env.ps1")
+$python = Resolve-A11Python -ProjectRoot $projectRoot
 $app = Join-Path $projectRoot "mmaction2-main\a11_tools\comparison_app.py"
 $logDir = Join-Path $projectRoot "outputs\comparison_server"
 $pidFile = Join-Path $logDir "server.pid"
@@ -19,7 +24,7 @@ if (-not $running) {
             "-X", "utf8", $app,
             "--host", "127.0.0.1",
             "--port", "7860",
-            "--device", "cuda:0"
+            "--device", $Device
         ) `
         -WorkingDirectory $projectRoot `
         -WindowStyle Hidden `

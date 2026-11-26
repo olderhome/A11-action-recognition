@@ -30,6 +30,9 @@ powershell -ExecutionPolicy Bypass -File .\run_batch_experiment.ps1
 
 结果保存在 `outputs/experiments/<运行时间>/`，其中 `REPORT.md` 是便于查看的汇总。
 
+最近一次仓库内验证使用 6 个视频、每条路线重复 3 次，共 36 次视频级推理。
+4 个有明确 Kinetics 参考标签的 UCF101 片段在两条路线上均进入 Top-5。
+
 根据最近一次批量实验生成论文候选图表：
 
 ```powershell
@@ -40,7 +43,7 @@ powershell -ExecutionPolicy Bypass -File .\run_review_figures.ps1
 
 ## 页面可以做什么
 
-- 运行“掰手腕示例”和已有的“摄像头人物近景”测试用例；
+- 运行“掰手腕示例”、5 个内置 UCF101 小型测试视频和现场摄像头用例；
 - 点击“采集摄像头并测试”，采集 4 秒摄像头视频后自动对照；
 - 同屏比较 TSN ResNet-50 的 2D 分段聚合路线与 R(2+1)D ResNet-34 的轻量 3D 路线；
 - 在每张画面内显示 Top-1、置信度、推理耗时和后续候选类别；
@@ -52,3 +55,9 @@ powershell -ExecutionPolicy Bypass -File .\run_review_figures.ps1
 两个模型目前都是 Kinetics-400 预训练模型，用于验证视频输入、模型推理和可视化链路。
 它们还不是 UCF101 的 101 类训练结果；页面显示的显存是推理时两个模型在 GPU 上的驻留量，
 不能替代训练阶段的“峰值显存不超过 2 GB”验收。
+
+`demo/test_cases/` 中的 5 个 AVI 仅用于端口测试和界面演示，不参与训练、验证
+或正式测试；完整 UCF101 数据仍由项目根目录的准备脚本下载。
+
+`UCF101 开合跳` 在 Kinetics-400 标签表中没有同名类别，因此只用于观察两条路线的
+预测差异，不参与目录内批量实验的准确率统计。

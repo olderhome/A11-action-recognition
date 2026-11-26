@@ -27,7 +27,8 @@ def route_rows(case, repeat, response, route_key):
     route = response['routes'][route_key]
     top5 = route['top5']
     reference = case['reference'].strip().lower()
-    known = reference not in {'', '无明确动作标签', '实时采集，参考标签未知'}
+    known = bool(case.get('reference_known', False)) and reference not in {
+        '', '无明确动作标签', '实时采集，参考标签未知'}
     labels = [item['label'].strip().lower() for item in top5]
     return {
         'case_id': case['id'],

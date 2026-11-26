@@ -32,10 +32,22 @@
 
 ## 环境
 
-项目使用当前目录内的便携 Python：
+第一次在新机器运行时，安装独立环境、依赖和演示权重：
 
 ```powershell
-.\runtime\python311\python.exe -m pip check
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
+无 NVIDIA 显卡时可使用 CPU 演示环境：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1 -CpuOnly
+```
+
+安装完成后使用：
+
+```powershell
+.\venv\Scripts\python.exe -m pip check
 ```
 
 已验证：
@@ -45,6 +57,9 @@
 - TorchVision 0.15.2
 - MMAction2 1.2.0
 - NVIDIA GTX 1050 Ti 4 GB
+
+仓库不包含 `.venv`、模型权重或 UCF101 训练数据；这些内容由安装和数据脚本生成。
+完整换机步骤见 `PORTABILITY.md`。
 
 ## UCF101 准备
 
@@ -103,6 +118,9 @@ powershell -ExecutionPolicy Bypass -File .\run_comparison_app.ps1
 ```
 
 打开 `http://127.0.0.1:7860`。
+
+仓库内置 5 个小型 UCF101 演示片段，位于 `demo/test_cases/`。这些视频只用于
+验证两条路线和界面，不参与正式精度评估。
 
 ## 实验原则
 

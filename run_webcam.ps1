@@ -1,8 +1,16 @@
+param(
+    [string]$Device = "auto"
+)
+
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = Join-Path $projectRoot "mmaction2-main"
-$python = Join-Path $projectRoot "runtime\python311\python.exe"
+. (Join-Path $projectRoot "a11_env.ps1")
+$python = Resolve-A11Python -ProjectRoot $projectRoot
+if ($Device -eq "auto") {
+    $Device = (& $python -c "import torch; print('cuda:0' if torch.cuda.is_available() else 'cpu')").Trim()
+}
 
 Push-Location $repo
 try {
@@ -10,7 +18,7 @@ try {
         demo\demo_configs\tsn_r50_1x1x8_video_infer.py `
         checkpoints\tsn_r50_kinetics400.pth `
         tools\data\kinetics\label_map_k400.txt `
-        --device cuda:0 `
+        --device $Device `
         --camera-id 0 `
         --threshold 0.1 `
         --average-size 2 `

@@ -5,7 +5,8 @@ param(
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$python = Join-Path $projectRoot "runtime\python311\python.exe"
+. (Join-Path $projectRoot "a11_env.ps1")
+$python = Resolve-A11Python -ProjectRoot $projectRoot
 $videoRoot = Join-Path $projectRoot "mmaction2-main\data\ucf101\videos"
 
 if (-not $SkipDataPreparation -and -not (Test-Path -LiteralPath $videoRoot)) {

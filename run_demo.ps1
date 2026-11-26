@@ -1,8 +1,16 @@
+param(
+    [string]$Device = "auto"
+)
+
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repo = Join-Path $projectRoot "mmaction2-main"
-$python = Join-Path $projectRoot "runtime\python311\python.exe"
+. (Join-Path $projectRoot "a11_env.ps1")
+$python = Resolve-A11Python -ProjectRoot $projectRoot
+if ($Device -eq "auto") {
+    $Device = (& $python -c "import torch; print('cuda:0' if torch.cuda.is_available() else 'cpu')").Trim()
+}
 $outputDir = Join-Path $projectRoot "outputs"
 $outputFile = Join-Path $outputDir "demo_tsn.mp4"
 
@@ -15,7 +23,7 @@ try {
         checkpoints\tsn_r50_kinetics400.pth `
         demo\demo.mp4 `
         tools\data\kinetics\label_map_k400.txt `
-        --device cuda:0 `
+        --device $Device `
         --out-filename $outputFile
 } finally {
     Pop-Location

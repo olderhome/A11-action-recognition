@@ -22,6 +22,7 @@ PROJECT_ROOT = REPO_ROOT.parent
 OUTPUT_ROOT = PROJECT_ROOT / 'outputs'
 RESULT_ROOT = OUTPUT_ROOT / 'comparison_results'
 CAMERA_ROOT = OUTPUT_ROOT / 'camera_tests'
+TEST_CASE_ROOT = PROJECT_ROOT / 'demo/test_cases'
 LABEL_FILE = REPO_ROOT / 'tools/data/kinetics/label_map_k400.txt'
 ASSET_FILE = Path(__file__).with_name('comparison_app.html')
 
@@ -66,6 +67,24 @@ BASE_CASES = [
 def read_labels():
     return [line.strip() for line in LABEL_FILE.read_text(
         encoding='utf-8').splitlines() if line.strip()]
+
+
+def validate_assets():
+    missing = []
+    if not LABEL_FILE.exists():
+        missing.append(LABEL_FILE)
+    if not ASSET_FILE.exists():
+        missing.append(ASSET_FILE)
+    for route in ROUTES.values():
+        if not route['config'].exists():
+            missing.append(route['config'])
+        if not route['checkpoint'].exists():
+            missing.append(route['checkpoint'])
+    if missing:
+        lines = "\n".join(str(path) for path in missing)
+        raise RuntimeError(
+            "Required demonstration files are missing:\n"
+            f"{lines}\nRun .\\download_model_weights.ps1 first.")
 
 
 def top5_from_scores(scores, labels):
@@ -165,8 +184,24 @@ def discover_camera_cases():
     return cases
 
 
+def discover_bundled_cases():
+    """Load the small, checked-in UCF101 demonstration clips."""
+    manifest = TEST_CASE_ROOT / 'cases.json'
+    if not manifest.exists():
+        return []
+    cases = json.loads(manifest.read_text(encoding='utf-8'))
+    result = []
+    for item in cases:
+        case = dict(item)
+        case['path'] = TEST_CASE_ROOT / item['path']
+        case['source'] = 'bundled'
+        result.append(case)
+    return result
+
+
 def all_cases():
-    return [case for case in BASE_CASES + discover_camera_cases()
+    return [case for case in
+            BASE_CASES + discover_bundled_cases() + discover_camera_cases()
             if case['path'].exists()]
 
 
@@ -476,16 +511,20 @@ def parse_args():
     parser.add_argument('--host', default='127.0.0.1')
     parser.add_argument('--port', type=int, default=7860)
     parser.add_argument(
-        '--device', default='cuda:0' if torch.cuda.is_available() else 'cpu')
+        '--device', default='auto')
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    app = Application(args.device)
+    validate_assets()
+    device = (
+        'cuda:0' if torch.cuda.is_available() else 'cpu'
+    ) if args.device == 'auto' else args.device
+    app = Application(device)
     server = ThreadingHTTPServer((args.host, args.port), make_handler(app))
     print(f'Comparison dashboard: http://{args.host}:{args.port}')
-    print(f'Device: {args.device}')
+    print(f'Device: {device}')
     server.serve_forever()
 
 

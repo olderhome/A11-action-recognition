@@ -12,6 +12,15 @@
 
 不需要激活系统 Python，运行脚本会直接调用当前目录中的便携 Python。
 
+如果项目被复制到另一台电脑，先运行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
+脚本会创建 `.venv` 并安装依赖与演示权重。启动脚本会依次寻找
+`runtime\python311\python.exe`、`.venv\Scripts\python.exe` 和系统 Python。
+
 ## 视频文件演示
 
 在 PowerShell 中运行：

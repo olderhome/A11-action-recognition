@@ -1,0 +1,57 @@
+{
+  "health": {
+    "ok": true,
+    "cuda": true,
+    "gpu": "NVIDIA GeForce GTX 1050 Ti"
+  },
+  "repeats": 3,
+  "testcases": [
+    {
+      "id": "demo_arm_wrestling",
+      "title": "掰手腕示例",
+      "description": "项目自带视频，动作明确，适合验证两条路线是否识别正确。",
+      "reference": "arm wrestling"
+    },
+    {
+      "id": "ucf_archery",
+      "title": "UCF101 射箭",
+      "description": "弓箭动作，适合观察人体姿态与器械关系。",
+      "reference": "archery",
+      "reference_known": true,
+      "source": "bundled"
+    },
+    {
+      "id": "ucf_basketball",
+      "title": "UCF101 篮球",
+      "description": "篮球运动片段，包含人物、球和场地。",
+      "reference": "shooting basketball",
+      "reference_known": true,
+      "source": "bundled"
+    },
+    {
+      "id": "ucf_playing_guitar",
+      "title": "UCF101 弹吉他",
+      "description": "乐器演奏片段，用于检查静态物体与重复动作的识别。",
+      "reference": "playing guitar",
+      "reference_known": true,
+      "source": "bundled"
+    },
+    {
+      "id": "ucf_jumping_jack",
+      "title": "UCF101 开合跳",
+      "description": "人体周期动作，适合验证时间采样差异。",
+      "reference": "开合跳（Kinetics-400 无同名类别）",
+      "reference_known": false,
+      "source": "bundled"
+    },
+    {
+      "id": "ucf_soccer_penalty",
+      "title": "UCF101 足球点球",
+      "description": "快速体育动作，用于观察短时运动线索。",
+      "reference": "shooting goal (soccer)",
+      "reference_known": true,
+      "source": "bundled"
+    }
+  ],
+  "duration_seconds": 20.66662709999946
+}

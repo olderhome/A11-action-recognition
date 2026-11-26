@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ucf_archery",
+    "title": "UCF101 射箭",
+    "description": "弓箭动作，适合观察人体姿态与器械关系。",
+    "reference": "archery",
+    "reference_known": true,
+    "path": "Archery/v_Archery_g07_c04.avi"
+  },
+  {
+    "id": "ucf_basketball",
+    "title": "UCF101 篮球",
+    "description": "篮球运动片段，包含人物、球和场地。",
+    "reference": "shooting basketball",
+    "reference_known": true,
+    "path": "Basketball/v_Basketball_g02_c01.avi"
+  },
+  {
+    "id": "ucf_playing_guitar",
+    "title": "UCF101 弹吉他",
+    "description": "乐器演奏片段，用于检查静态物体与重复动作的识别。",
+    "reference": "playing guitar",
+    "reference_known": true,
+    "path": "PlayingGuitar/v_PlayingGuitar_g19_c07.avi"
+  },
+  {
+    "id": "ucf_jumping_jack",
+    "title": "UCF101 开合跳",
+    "description": "人体周期动作，适合验证时间采样差异。",
+    "reference": "开合跳（Kinetics-400 无同名类别）",
+    "reference_known": false,
+    "path": "JumpingJack/v_JumpingJack_g22_c04.avi"
+  },
+  {
+    "id": "ucf_soccer_penalty",
+    "title": "UCF101 足球点球",
+    "description": "快速体育动作，用于观察短时运动线索。",
+    "reference": "shooting goal (soccer)",
+    "reference_known": true,
+    "path": "SoccerPenalty/v_SoccerPenalty_g18_c01.avi"
+  }
+]

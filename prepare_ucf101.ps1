@@ -6,7 +6,8 @@ $archive = Join-Path $dataRoot "UCF-101.zip"
 $extractRoot = Join-Path $dataRoot "extracted"
 $videoRoot = Join-Path $dataRoot "videos"
 $sevenZip = "C:\Program Files\7-Zip\7z.exe"
-$python = Join-Path $projectRoot "runtime\python311\python.exe"
+. (Join-Path $projectRoot "a11_env.ps1")
+$python = Resolve-A11Python -ProjectRoot $projectRoot
 
 if (-not (Test-Path -LiteralPath $archive)) {
     throw "UCF101 archive is missing: $archive"
